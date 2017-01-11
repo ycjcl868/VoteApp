@@ -1,7 +1,12 @@
 # 电影投票系统
 
-> Java课程设计，想试试前后端完全分离的开发(原来在Class+时曾体验过)，于是有了下面4天2人的开发历程。先上图吧！Github地址：[https://github.com/ycjcl868/VoteApp](https://github.com/ycjcl868/VoteApp)，Demo：[http://movie.ycjcl.cc](http://movie.ycjcl.cc)
+> Java课程设计，想试试前后端完全分离的开发(原来在Class+时曾体验过)，于是有了下面4天2人的开发历程。先上图吧！Demo：[http://movie.ycjcl.cc](http://movie.ycjcl.cc)
 
+`clone`下来后：
+执行`npm install --production`
+然后再执行`bower install`
+
+就 ok 了，enjoy!~
 
 
 前台投票页：
