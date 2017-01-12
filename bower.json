@@ -1,0 +1,27 @@
+{
+  "name": "voteapp",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "信鑫-King <45808948@qq.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./dist/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "1.0.26",
+    "frozenui": "*",
+    "zepto": "^1.2.0",
+    "layer": "^3.0.1",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery-form": "^3.46.0"
+  }
+}

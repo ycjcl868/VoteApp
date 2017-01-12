@@ -1,0 +1,169 @@
+p,span{font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif}
+
+
+@header-height:50px;
+.ky-header{
+  background-color: #fff;
+  .row{
+    background-color: #48BA9F;    
+    &>div{
+      height: @header-height;
+      text-align: center;
+    }
+  }  
+  .title{
+    width: 200px;
+    float: left;
+    a{
+      color: #fff;
+      line-height: @header-height;
+      font-size: 18px;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  .info{
+    float: right;
+    background-color: #39A88E;
+    .name{
+      height: @header-height;
+      padding: 0 20px;      
+      p{
+        line-height: @header-height;
+        span{
+          color: #fff;
+          font-size: 18px;
+          vertical-align: middle;          
+        }
+        img{
+          height: @header-height - 10px;
+          margin: 0 5px;
+
+        }
+        a{
+          color:#fff;
+          transition:all .3s ease-in-out;
+          &:hover{
+            color:#ccc;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .navbar-toggle{
+      background-color: #39A88E;
+      transition: all .3s ease-in-out;
+      span{
+        background-color: #fff;
+      }
+      &:hover{
+        background-color: #48BA9F;           
+      }
+    }
+  }
+}
+
+.menu {
+  width:240px;
+  height:100%;
+  background:#3A3A3A;
+  position:absolute;
+  left: 0;
+  transition:all .3s ease-in-out;
+  z-index:100;
+  #leftside-navigation{
+    ul{
+        margin:-2px 0 0;
+        padding:0;      
+      ul{
+        display: none;
+        margin:-2px 0 0;
+        padding:0;
+        li{
+          background:#23313f;
+          margin-bottom:0;
+          margin-left:0;
+          margin-right:0;
+          border-bottom:none;
+          a{
+            font-size:12px;
+            padding-top:13px;
+            padding-bottom:13px;
+            color:#aeb2b7;  
+          }
+        }
+      }
+      li{
+        list-style-type:none;
+        border-bottom:1px solid rgba(255,255,255,.05);
+        a{
+          color:#aeb2b7;
+          text-decoration:none;
+          display:block;
+          padding:16px 0 12px 25px;
+          font-size:12px;
+          outline:0;
+          transition:all 200ms ease-in;
+          i{
+            width:30px;
+            font-size: 20px;
+          }
+          span{
+            font-size: 16px;
+            display:inline-block;
+          }
+        }
+      }
+    }
+    li.active{
+      ul{
+        display: block;
+      }
+    }
+  }
+}
+
+.main-block{
+    margin-left: 240px; 
+    padding:20px;
+    transition:all .3s ease-in-out;
+    .course-table{
+      tbody{
+        tr{
+          td,th{
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+}
+.panel{
+  .panel-heading{
+    i{
+      width: 25px;
+    }
+  }
+  #chartContainer{
+    height: 300px; 
+    width: 100%;    
+  }
+}
+#leftside-navigation ul li a i.fa-angle-left,#leftside-navigation ul li a i.fa-angle-right {
+  padding-top:3px
+}
+#leftside-navigation ul li a:hover,#leftside-navigation ul li.active>a {
+  color:#1abc9c
+}
+
+@media (max-width: 768px){
+  .ky-header{
+
+    .info{
+      background-color: transparent;         
+      .name{
+        display: none;
+      }
+    }
+  }
+}
