@@ -2,7 +2,7 @@ var request = require('request');
 var md5 = require('md5');
 
 var timeout = 8000;
-var baiduAK = 'xxxxxxxxxxxx';
+var baiduAK = 'xxxxxxxxxxxxxx';
 
 module.exports = {
     /**
