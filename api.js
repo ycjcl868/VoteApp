@@ -90,7 +90,7 @@ module.exports = {
      * @param userIP 用户ip
      */
     cryptoToken:function(userIP,fun){
-        return md5(userIP + 'godcan');
+        return md5(userIP + 'xxxxx');
     },
     getProvince:function (userIP,fun) {
         
