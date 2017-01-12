@@ -2,7 +2,7 @@ var request = require('request');
 var md5 = require('md5');
 
 var timeout = 8000;
-var baiduAK = 'PvGhSZuS43N79LAeAhPuanTw';
+var baiduAK = 'xxxxxxxxxxxx';
 
 module.exports = {
     /**
@@ -90,7 +90,7 @@ module.exports = {
      * @param userIP 用户ip
      */
     cryptoToken:function(userIP,fun){
-        return md5(userIP + 'xxxxx');
+        return md5(userIP + 'xxxxxx');
     },
     getProvince:function (userIP,fun) {
         
