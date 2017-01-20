@@ -6,6 +6,7 @@ var token = md5('godcan');
 var api = require('../api');
 
 var multer  = require('multer');
+var path = require('path');
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, '../dist/upload/');
@@ -15,8 +16,47 @@ var storage = multer.diskStorage({
         cb(null, file.fieldname + '-' + Date.now() + "." + fileFormat[fileFormat.length - 1]);
     }
 });
-var upload = multer({  storage: storage });
+var upload = multer({
+    // 存储文件的位置
+    storage: storage,
+    
+    // 验证上件的文件格式
+    fileFilter:function (req, file, cb) {
+        var filetypes = /jpeg|jpg/;
+        var mimetype = filetypes.test(file.mimetype);
+        var extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+        // console.log(mimetype);
+        // console.log(extname);
+        if(mimetype && extname){
+            return cb(null,true);
+        }
+        return cb(null,false);
+    },
+    // 限制条件
+    limits:{
+        // 72kb
+        fileSize:1024000
+    }
+}).single('upload');
 
+
+/**
+ * 上传图片
+ */
+router.post('/upload',isLogin,function (req, res, next) {
+    var params = {};
+    upload(req,res,function (err) {
+        console.log(req.file);
+        // console.log(err);
+        if(req.file){
+            var filename = req.file.filename;
+            params = {status:1,filename:filename};
+        }else{
+            params = {status:-1};
+        }
+        res.json(params);
+    });
+});
 
 /**
  * 登陆页面
@@ -79,8 +119,8 @@ router.post('/login',function(req,res,next){
     var authcode = 1;
     
     var params = {};
-    console.log(username);
-    console.log(password);
+    // console.log(username);
+    // console.log(password);
 
     if(username && password){
         if(usercode !== authcode){
@@ -88,7 +128,7 @@ router.post('/login',function(req,res,next){
         }else if(username == ''){
             params = {status:-1,info:'用户名错误'};
         }else{
-            if(username == 'kylin' && password == '4fb1ea2fccc51a29a3285c603287d006'){
+            if(username == 'kylin' && password == 'xxxxxxxxxxxxxxxxxxxxxxxxx'){
                 params = {status:1,info:'登陆成功',adminID:'kylin'};
                 req.session.adminID = 'kylin';
             }else{
@@ -148,20 +188,7 @@ router.post('/movie/edit',isLogin,function (req, res, next) {
     params.cineId = req.body.cineId;
 });
 
-/**
- * 上传图片
- */
-router.post('/upload',isLogin,upload.single('upload'),function (req, res, next) {
-    
-    var params = {};
-    if(req.file){
-        var filename = req.file.filename;
-        params = {status:1,filename:filename};
-    }else{
-        params = {status:-1};
-    }
-    res.json(params);
-});
+
 
 
 
