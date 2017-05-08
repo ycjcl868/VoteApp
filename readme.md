@@ -2,9 +2,17 @@
 
 > Java课程设计，想试试前后端完全分离的开发(原来在Class+时曾体验过)，于是有了下面4天2人的开发历程。先上图吧！Demo：[http://movie.ycjcl.cc](http://movie.ycjcl.cc)
 
-`clone`下来后：
-执行`npm install --production`
-然后再执行`bower install`
+## 安装
+
+> 确保安装了[NodeJS](https://nodejs.org/en/)
+`git clone https://github.com/ycjcl868/VoteApp.git`   
+`cd VoteApp` 进入项目中  
+执行 `npm install`  
+使用 `bower install` 安装前端依赖库(若没有安装 `bower` ，使用 `npm install -g bower` 安装)  
+然后执行 `npm build` 命令对项目进行打包，会生成 `dist` 打包好的目录  
+执行 `npm start` 开启项目, http://localhost:3008  
+
+
 
 就 ok 了，enjoy!~
 

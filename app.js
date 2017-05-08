@@ -27,7 +27,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use(session({
     secret: 'kylin',
-    cookie:{maxAge: 600000}
+    cookie:{maxAge: 600000},
+    resave: true,
+    saveUninitialized: true
 }));
 
 app.use('/', routes);
