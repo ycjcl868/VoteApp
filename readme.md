@@ -5,6 +5,7 @@
 ## 安装
 
 > 确保安装了[NodeJS](https://nodejs.org/en/)
+
 `git clone https://github.com/ycjcl868/VoteApp.git`   
 `cd VoteApp` 进入项目中  
 执行 `npm install`  
