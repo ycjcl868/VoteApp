@@ -128,7 +128,7 @@ router.post('/login',function(req,res,next){
         }else if(username == ''){
             params = {status:-1,info:'用户名错误'};
         }else{
-            if(username == 'kylin' && password == 'xxxxxxxxxxxxxxxxxxxxxxxxx'){
+            if(username == 'kylin' && password == 'e10adc3949ba59abbe56e057f20f883e'){
                 params = {status:1,info:'登陆成功',adminID:'kylin'};
                 req.session.adminID = 'kylin';
             }else{
