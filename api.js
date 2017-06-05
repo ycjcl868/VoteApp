@@ -3,6 +3,7 @@ var md5 = require('md5');
 
 var timeout = 8000;
 var baiduAK = 'xxxxxxxxxxxxxx';
+var serverIP = 'http://123.207.100.172'
 
 module.exports = {
     /**
@@ -10,7 +11,7 @@ module.exports = {
      * @param fun 回调函数
      */
     getMovie:function (fun) {
-        request.get('http://123.207.100.172/VoteSystem/cine/news.do',function (err, req, res) {
+        request.get(serverIP+'VoteSystem/cine/news.do',function (err, req, res) {
             fun(res);
         })
     },
@@ -21,7 +22,7 @@ module.exports = {
      */
     doVote:function(params,fun){
       request.post({
-          url: 'http://123.207.100.172/VoteSystem/user/poll.do',
+          url: serverIP+'VoteSystem/user/poll.do',
           form:params,
           timeout:timeout
       },function (err, req, res) {
@@ -37,7 +38,7 @@ module.exports = {
      */
     addMovie:function(params,fun){
         request.post({
-            url:'http://123.207.100.172/VoteSystem/insert/cine.do', 
+            url:serverIP+'VoteSystem/insert/cine.do', 
             form:params,
             timeout:timeout
         },function(err,req,res){
@@ -53,7 +54,7 @@ module.exports = {
      */
     delMovie:function (params, fun) {
         request.post({
-            url:'http://123.207.100.172/VoteSystem/delete/cine.do',
+            url:serverIP+'VoteSystem/delete/cine.do',
             form:params,
             timeout:timeout
         },function(err,req,res){
@@ -65,7 +66,7 @@ module.exports = {
         });
     },
     getSummary:function (fun) {
-      request.get('http://123.207.100.172/VoteSystem/obtain/data.do',function (err, req, res) {
+      request.get(serverIP+'VoteSystem/obtain/data.do',function (err, req, res) {
           fun(res);
       });
     },
@@ -73,7 +74,7 @@ module.exports = {
      * 获取日志数
      */
     getNum:function (fun) {
-      request.get('http://123.207.100.172/VoteSystem/info/count.do',function (err, req, res) {
+      request.get(serverIP+'VoteSystem/info/count.do',function (err, req, res) {
          fun(res); 
       });
     },
@@ -81,7 +82,7 @@ module.exports = {
      * 获取日志信息
      */
     getLog:function (fun) {
-        request.get('http://123.207.100.172/VoteSystem/info/news.do',function (err, req, res) {
+        request.get(serverIP+'VoteSystem/info/news.do',function (err, req, res) {
             fun(res);
         })
     },
