@@ -49,7 +49,7 @@ $ npm start
 * [x] 搜索
 * [ ] 投票成功分享
 
-![](./READMEImg/1.gif)
+![](https://ycjcl868.github.io/VoteApp/img/1.gif)
 
 后台管理：
 
@@ -59,14 +59,14 @@ $ npm start
 * [ ] 修改电影 
 * [ ] 查看统计图
 
-![](./READMEImg/2.gif)
+![](https://ycjcl868.github.io/VoteApp/img/2.gif)
 
 ## 系统架构
 
 ### 概述
 共用了两台腾讯云服务器(CentOS 7)，一台前端Node服务器和一台Java SpringMVC服务器，之前的交互通过`JSON`。通过前后分离，将`MVC`中的`View`和`Controller`层分给前端，后台`SpringMVC`负责`Model`层，只提供`JSON`数据，交互如图：
 
-![](./READMEImg/架构图.png)
+![](https://ycjcl868.github.io/VoteApp/img/架构图.png)
 
 ### 前端服务器
 
@@ -74,23 +74,23 @@ $ npm start
 
 #### 首页：
 
-![](./READMEImg/3.jpg)
+![](https://ycjcl868.github.io/VoteApp/img/3.jpg)
 
-![](./READMEImg/1.png)
+![](https://ycjcl868.github.io/VoteApp/img/1.png)
 
 #### 日志页：
 
-![](./READMEImg/2.png)
+![](https://ycjcl868.github.io/VoteApp/img/2.png)
 
 #### 数据统计页：
 
-![](./READMEImg/0.png)
+![](https://ycjcl868.github.io/VoteApp/img/0.png)
 
 #### 后台页面
 
-![](./READMEImg/5.png)
+![](https://ycjcl868.github.io/VoteApp/img/5.png)
 
-![](./READMEImg/10.png)
+![](https://ycjcl868.github.io/VoteApp/img/10.png)
 
 
 #### 信息安全
@@ -129,7 +129,7 @@ router.post('/doVote', function(req, res, next) {
 
 然后后台Java拿到`ip`后，对`ip`进行加密然后判断是否等于前端传来的`token`来执行投票操作。
 
-![](./READMEImg/11.png)
+![](https://ycjcl868.github.io/VoteApp/img/11.png)
 
 #### 本地存储
 首次在项目中使用`localStorage`的新特性，存储了是否投过票`voteId`和投票时间`voteTime`。来前端控制一个小时内只能投票一次(当然后台 Java 也得控制呢~)。当`Vue`到`ready`生命周期时就判断：
@@ -147,14 +147,14 @@ if(currentTime - voteTime >= 3600000){
 ```
 这样，再次刷新时，如果投过`button`就成灰色，效果如图
 
-![](./READMEImg/8.png)
+![](https://ycjcl868.github.io/VoteApp/img/8.png)
 
 当然，另一舍友今天也问我，为什么不用`cookie`，`cookie`还可以设置过期时间呢，区别是什么?，见文解析[详说 Cookie, LocalStorage 与 SessionStorage](http://jerryzou.com/posts/cookie-and-web-storage/)。不过，我认为`cookie`也是可以的，`localStorage`是键值对，而`cookie`只是字符串，没有封装`cookie`方法时操作`cookie`就比较麻烦。
 
 #### 前端自动化工具Gulp
 本想试下`Webpack`，发现不好配，还是配下稍微熟悉点的`Gulp`，发现真是方便，自动编译`Less`，自动检查语法错误，自动压缩，自动浏览器刷新，前端开发神器。
 
-![](./READMEImg/13.png)
+![](https://ycjcl868.github.io/VoteApp/img/13.png)
 
 
 
@@ -164,7 +164,7 @@ if(currentTime - voteTime >= 3600000){
 ### 后台服务器
 只负责提供`JSON`数据，基本架构`Springmvc+Spring+MyBatis`是我舍友写的。数据库采用 `Mysql`(本来打算用`Oracle`，不过实在是太重了，不易管理，所以换Mysql了)
 
-![](./READMEImg/7.png)
+![](https://ycjcl868.github.io/VoteApp/img/7.png)
 
 ## 遇到的问题
 
@@ -172,9 +172,9 @@ if(currentTime - voteTime >= 3600000){
 
 ###### 2. 后台英文要稍微好点，不然**{"statue":1}**和**{"status":1}**是很容易写错了。(自我反省了好久，我有没有错，才发现不是我的错。)
 
-![](./READMEImg/12.png)
+![](https://ycjcl868.github.io/VoteApp/img/12.png)
 
-![](./READMEImg/9.png)
+![](https://ycjcl868.github.io/VoteApp/img/9.png)
 
 ###### 3. **json**问题，有时一粗心，就忘通过**JSON.parse(jsonStr)**将**json字符串**转成**json对象**了。
 
@@ -182,7 +182,7 @@ if(currentTime - voteTime >= 3600000){
 
 ###### 5. 舍友对**Linux**不是太了解，在**大小写方面**和**目录权限**问题上没处理好！
 
-![](./READMEImg/14.png)
+![](https://ycjcl868.github.io/VoteApp/img/14.png)
 
 ###### 6. 后台对编码的处理没统一，先传过去的中文全是乱码，我一看数据库格式不是**utf8_general_ci**就明白了，结果还是乱码，舍友一看肯定是**SpringMVC**没有设置过滤器**UTF-8**格式，一加就**OK**了
 
@@ -190,8 +190,8 @@ if(currentTime - voteTime >= 3600000){
 
 ###### 7. 最后一个问题是部署在云上时才发现的，因为用了**Nginx**服务器代理到了**NodeJS**，所以才开始获取到的用户ip全是`127.0.0.1`，最后**Node**要获取`ip`的话，只能通过`X-Forwarded-For` 的头`(起初我个人觉得不太安全，不过一测试，结果不能伪造)`。
 
-![](./READMEImg/FFA456B0-26BE-45A6-A0B9-D8627275D7CA.png)
+![](https://ycjcl868.github.io/VoteApp/img/FFA456B0-26BE-45A6-A0B9-D8627275D7CA.png)
 
 ###### 8. 正式投票时，发现投了6个左右，后台Java Spring后台就挂掉了，显示的错误信息大概的意思是阻止请求信息，一查发现是没有配置连接数，所以就爆掉了，临时写了一个反馈的弹窗。最后改了之后，就能解决小量高并发了。
 
-![](./READMEImg/D9AEEFE8-17CB-474A-829A-AD06D14B9424.png)
+![](https://ycjcl868.github.io/VoteApp/img/D9AEEFE8-17CB-474A-829A-AD06D14B9424.png)
