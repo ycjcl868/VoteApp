@@ -2,8 +2,7 @@ var request = require('request');
 var md5 = require('md5');
 
 var timeout = 8000;
-var baiduAK = 'xxxxxxxxxxxxxx';
-var serverIP = 'http://123.207.100.172'
+var baiduAK = 'PvGhSZuS43N79LAeAhPuanTw';
 
 module.exports = {
     /**
@@ -11,9 +10,9 @@ module.exports = {
      * @param fun 回调函数
      */
     getMovie:function (fun) {
-        request.get(serverIP+'VoteSystem/cine/news.do',function (err, req, res) {
+        request.get('http://119.29.63.113/VoteSystem/cine/news.do',function (err, req, res) {
             fun(res);
-        })
+        });
     },
     /**
      * 执行投票操作
@@ -22,7 +21,7 @@ module.exports = {
      */
     doVote:function(params,fun){
       request.post({
-          url: serverIP+'VoteSystem/user/poll.do',
+          url: 'http://119.29.63.113/VoteSystem/user/poll.do',
           form:params,
           timeout:timeout
       },function (err, req, res) {
@@ -31,14 +30,14 @@ module.exports = {
           }else{
               fun(res);
           }
-      })  
+      });
     },
     /**
      * 添加电影
      */
     addMovie:function(params,fun){
         request.post({
-            url:serverIP+'VoteSystem/insert/cine.do', 
+            url:'http://119.29.63.113/VoteSystem/insert/cine.do', 
             form:params,
             timeout:timeout
         },function(err,req,res){
@@ -54,7 +53,7 @@ module.exports = {
      */
     delMovie:function (params, fun) {
         request.post({
-            url:serverIP+'VoteSystem/delete/cine.do',
+            url:'http://119.29.63.113/VoteSystem/delete/cine.do',
             form:params,
             timeout:timeout
         },function(err,req,res){
@@ -66,7 +65,7 @@ module.exports = {
         });
     },
     getSummary:function (fun) {
-      request.get(serverIP+'VoteSystem/obtain/data.do',function (err, req, res) {
+      request.get('http://119.29.63.113/VoteSystem/obtain/data.do',function (err, req, res) {
           fun(res);
       });
     },
@@ -74,7 +73,7 @@ module.exports = {
      * 获取日志数
      */
     getNum:function (fun) {
-      request.get(serverIP+'VoteSystem/info/count.do',function (err, req, res) {
+      request.get('http://119.29.63.113/VoteSystem/info/count.do',function (err, req, res) {
          fun(res); 
       });
     },
@@ -82,7 +81,7 @@ module.exports = {
      * 获取日志信息
      */
     getLog:function (fun) {
-        request.get(serverIP+'VoteSystem/info/news.do',function (err, req, res) {
+        request.get('http://119.29.63.113/VoteSystem/info/news.do',function (err, req, res) {
             fun(res);
         })
     },
@@ -91,7 +90,7 @@ module.exports = {
      * @param userIP 用户ip
      */
     cryptoToken:function(userIP,fun){
-        return md5(userIP + 'xxxxxx');
+        return md5(userIP + 'godcan');
     },
     getProvince:function (userIP,fun) {
         
@@ -110,4 +109,9 @@ module.exports = {
             fun(province);
         })
     }
+    
+        
+    
+    
+    
 };

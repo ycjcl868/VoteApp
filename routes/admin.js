@@ -6,10 +6,21 @@ var token = md5('godcan');
 var api = require('../api');
 
 var multer  = require('multer');
+var mkdirp = require('mkdirp');
+var fs = require('fs');
 var path = require('path');
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, '../dist/upload/');
+        fs.stat('dist/upload/', function(err) {
+            if(err) {
+                console.log(err);
+            }else {
+                console.log('ok');
+            }
+            
+        })
+        cb(null, 'dist/upload/');
+
     },
     filename: function (req, file, cb) {
         var fileFormat = (file.originalname).split(".");
@@ -22,11 +33,11 @@ var upload = multer({
     
     // 验证上件的文件格式
     fileFilter:function (req, file, cb) {
-        var filetypes = /jpeg|jpg/;
+        var filetypes = /jpeg|jpg|png/;
         var mimetype = filetypes.test(file.mimetype);
         var extname = filetypes.test(path.extname(file.originalname).toLowerCase());
-        // console.log(mimetype);
-        // console.log(extname);
+        console.log(mimetype);
+        console.log(extname);
         if(mimetype && extname){
             return cb(null,true);
         }
@@ -45,9 +56,10 @@ var upload = multer({
  */
 router.post('/upload',isLogin,function (req, res, next) {
     var params = {};
+    console.log('upload');
     upload(req,res,function (err) {
         console.log(req.file);
-        // console.log(err);
+        console.log(err);
         if(req.file){
             var filename = req.file.filename;
             params = {status:1,filename:filename};
