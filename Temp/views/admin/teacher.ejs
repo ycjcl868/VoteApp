@@ -1,0 +1,75 @@
+<%- include('header') -%>
+
+  <div class="main-block">
+    所有教师
+
+<table class="table table-hover course-table table-striped">
+      <thead>
+        <tr>
+          <th>教工号</th>
+          <th>教师姓名</th>
+          <th>教师职称</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody id="teachers-table">
+
+
+<% for(var i = 0; i < data.status; i++){  %>
+
+	     <tr>
+          <th scope="row" class="courseID"><%=data.data[i].teacherID%></th>
+          <td><input type="text" value="<%=data.data[i].teacherName%>"></td>
+          <td><input type="text" value="<%=data.data[i].jobTitle%>"></td>
+          <td><button type="button" class="btn btn-primary Tsave">保存</button><button type="button" class="btn btn-danger Tdel">删除</button><button type="button" class="btn btn-warning resetPass">重置密码</button></td>
+        </tr>
+
+<%	} %>
+
+
+
+
+ 
+
+      </tbody>
+    </table>
+<button type="button" class="btn btn-primary btn-lg btn-block"  data-toggle="modal" data-target="#teacherForm">添加教师</button>    
+  </div>
+
+<!-- 添加教师 -->
+<div class="modal fade" id="teacherForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">添加教师</h4>
+      </div>
+      <div class="modal-body">
+		<form>
+		  <div class="form-group">
+		    <label for="teacherID">教师号</label>
+		    <input type="number" class="form-control" id="teacherID" placeholder="教师号">
+		  </div>
+		  <div class="form-group">
+		    <label for="teacherName">教师姓名</label>
+		    <input type="text" class="form-control" id="teacherName" placeholder="教师姓名">
+		  </div>		  
+
+		  <div class="form-group">
+		    <label for="jobTitle">职称</label>
+		    <input type="text" class="form-control" id="jobTitle" placeholder="职称">
+		  </div>
+		</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" id="add-teacher">确认添加</button>
+      </div>
+    </div>
+  </div>
+</div>    
+
+<script type="text/javascript" src='/bower_components/layer/mobile/layer.m.js'></script>
+<%- include('footer') -%>
+
+

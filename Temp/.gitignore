@@ -1,0 +1,5 @@
+dist
+!dist/lib/canvasjs.min.js
+dev.md
+node_modules
+.idea
