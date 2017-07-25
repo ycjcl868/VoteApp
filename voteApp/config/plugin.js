@@ -6,8 +6,8 @@ exports.proxyworker = {
   enable: true,
   package: 'egg-development-proxyworker',
 };
-exports.ejs = {
+exports.nunjucks = {
   enable: true,
-  package: 'egg-view-ejs',
+  package: 'egg-view-nunjucks',
 };
 exports.static = true;

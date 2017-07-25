@@ -1,3 +1,25 @@
 {
-  "extends": "eslint-config-egg"
+  "extends": "eslint-config-egg",
+  "plugins": ["react"],
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module"
+  },
+  "rules": {
+    "react/display-name": 0,
+    "react/jsx-boolean-value": 2,
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+    "jsx-quotes": 2,
+    "react/jsx-no-undef": 2,
+    "react/jsx-sort-props": 0,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/no-did-mount-set-state": 0,
+    "react/no-did-update-set-state": 2,
+    "react/no-multi-comp": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/self-closing-comp": 2,
+    "react/wrap-multilines": 2,
+    "no-extra-parens": [2, "functions"]
+  }
 }
