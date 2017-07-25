@@ -16,23 +16,14 @@ module.exports = {
     loaders: [
       {
         test: /\.(jsx|js)?$/,
-        loader: 'react-hot-loader',
+        loader: 'react-hot-loader!babel-loader',
         exclude: /node_modules/,
-      },
-      {
-        test: /\.(jsx|js)?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
-          presets: [ 'react', 'es2015', 'stage-0' ],
-          plugins: [
-            [ 'transform-runtime' ],
-            [ 'import', { libraryName: 'antd-mobile', style: 'css' }],
-          ],
-        },
       }, {
-        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
+        test: /\.(png|jpg|jpeg|gif|woff|woff2)$/,
         loader: 'url-loader?limit=100000',
+      }, {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader?runtimeCompat=true',
       }, {
         test: /(\.less)$/,
         loader: 'style!css!less',
@@ -49,7 +40,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [ '', '.js', '.jsx', '.ts', '.html', '.json' ],
+    extensions: [ '', '.web.tsx', '.web.ts', '.web.jsx', '.web.js', '.ts', '.tsx', '.js', '.jsx', '.json' ],
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'app/public'),

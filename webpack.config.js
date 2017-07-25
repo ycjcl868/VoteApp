@@ -15,16 +15,12 @@ module.exports = {
         test: /\.(jsx|js)?$/,
         loader: 'babel',
         exclude: /node_modules/,
-        query: {
-          presets: [ 'react', 'es2015', 'stage-0' ],
-          plugins: [
-            [ 'transform-runtime' ],
-            [ 'import', { libraryName: 'antd', style: 'css' }],
-          ],
-        },
       }, {
-        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
+        test: /\.(png|jpg|jpeg|gif|woff|woff2)$/,
         loader: 'url-loader?limit=100000',
+      }, {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader?runtimeCompat=true',
       }, {
         test: /(\.less)$/,
         loader: 'style!css!less',
@@ -41,7 +37,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [ '', '.js', '.jsx', '.ts', '.html', '.json' ],
+    extensions: [ '', '.web.tsx', '.web.ts', '.web.jsx', '.web.js', '.ts', '.tsx', '.js', '.jsx', '.json' ],
   },
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),

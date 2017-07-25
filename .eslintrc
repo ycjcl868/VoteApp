@@ -3,9 +3,15 @@
   "plugins": ["react"],
   "parserOptions": {
     "ecmaVersion": 2017,
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true,
+    }
   },
+  "parser": "babel-eslint",
   "rules": {
+    "strict": 0,
     "react/display-name": 0,
     "react/jsx-boolean-value": 2,
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],

@@ -1,0 +1,10 @@
+{
+  "presets": [  "react", "es2015", "stage-0" ],
+  "plugins": [
+    [ "transform-runtime" ],
+    [ "import",
+      { "libraryName": "antd-mobile", "style": "css" },
+      { "libraryName": "antd", "style": "css" }
+    ]
+  ]
+}
