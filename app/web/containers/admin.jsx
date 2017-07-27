@@ -8,11 +8,11 @@ class Admin extends Component {
     return (
       <div>
         <p>Hello</p>
-        <p>{this.props.admin.record}</p>
+
         <Link to="/">返回主页</Link>
       </div>
     );
   }
 }
 
-export default connect(({ admin }) => ({ admin }))(Admin);
+export default Admin;

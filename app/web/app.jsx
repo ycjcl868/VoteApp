@@ -1,7 +1,7 @@
 import dva from 'dva';
-import { Router, Route } from 'dva/router';
+import { Router, Route, IndexRoute } from 'dva/router';
 import React from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 
 import Index from './containers/index.jsx';
 import Admin from './containers/admin.jsx';
@@ -20,7 +20,9 @@ app.model(adminModel);
 
 app.router(({ history }) =>
   <Router history={history}>
-    <Route path="/" component={Index} />
+    <Route path="/">
+      <IndexRoute component={Index} />
+    </Route>
     <Route path="/admin" component={Admin} />
   </Router>
 );

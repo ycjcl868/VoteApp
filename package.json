@@ -59,7 +59,7 @@
     "start": "node index.js",
     "dev": "webpack && egg-bin dev",
     "dev:server": "egg-bin dev",
-    "dev:client": "webpack-dev-server --hot --open --colors --inline --config webpack.dev.conf.js",
+    "dev:client": "webpack-dev-server --hot --inline --config webpack.dev.conf.js",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",
     "cov": "egg-bin cov",

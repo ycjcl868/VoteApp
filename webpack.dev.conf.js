@@ -47,6 +47,7 @@ module.exports = {
     hot: true,
     port: 8899,
     inline: true,
+    noInfo: true,
   },
   plugins: [
     new htmlWebpackPlugin({
@@ -56,7 +57,6 @@ module.exports = {
       hash: true,
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
