@@ -1,5 +1,5 @@
 import dva from 'dva';
-import { Router, Route, IndexRoute } from 'dva/router';
+import { Router, Route, IndexRoute, browserHistory } from 'dva/router';
 import React from 'react';
 // import ReactDOM from 'react-dom';
 
@@ -9,7 +9,9 @@ import Admin from './containers/admin.jsx';
 import './styles/style.less';
 
 
-const app = dva();
+const app = dva({
+  history: browserHistory,
+});
 
 // app.model();
 app.model(require('./model/index'));

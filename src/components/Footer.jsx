@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { TabBar } from 'antd-mobile';
+import { browserHistory } from 'dva/router';
+
 
 import { Icon } from '../common';
 
@@ -23,35 +25,25 @@ class Footer extends Component {
           <TabBar.Item
             title="电影列表"
             key="电影列表"
-            icon={<div style={{
-              width: '0.44rem',
-              height: '0.44rem',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  0.42rem 0.42rem no-repeat' }}
-            />
-            }
-            selectedIcon={<div style={{
-              width: '0.44rem',
-              height: '0.44rem',
-              background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  0.42rem 0.42rem no-repeat' }}
-            />
-            }
+            icon={<Icon className="footer-icon" type="dianying" />}
+            selectedIcon={<Icon className="footer-icon" type="dianying" />}
             selected={this.state.selectedTab === 'blueTab'}
-            badge={1}
             onPress={() => {
               this.setState({
                 selectedTab: 'blueTab',
               });
+              browserHistory.push('/admin');
             }}
             data-seed="logId"
           >
 
           </TabBar.Item>
           <TabBar.Item
-            icon={<Icon type="koubei-o" size="md" />}
-            selectedIcon={<Icon type="koubei" size="md" />}
+            icon={<Icon className="footer-icon" type="dongtai" />}
+            selectedIcon={<Icon className="footer-icon" type="dongtai" />}
             title="投票动态"
             key="投票动态"
-            badge={'new'}
+            badge={5}
             selected={this.state.selectedTab === 'redTab'}
             onPress={() => {
               this.setState({
@@ -64,22 +56,13 @@ class Footer extends Component {
           </TabBar.Item>
           <TabBar.Item
             icon={
-              <div style={{
-                width: '0.44rem',
-                height: '0.44rem',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/psUFoAMjkCcjqtUCNPxB.svg) center center /  0.42rem 0.42rem no-repeat' }}
-              />
+              <Icon className="footer-icon" type="tongji-copy" />
             }
             selectedIcon={
-              <div style={{
-                width: '0.44rem',
-                height: '0.44rem',
-                background: 'url(https://zos.alipayobjects.com/rmsportal/IIRLrXXrFAhXVdhMWgUI.svg) center center /  0.42rem 0.42rem no-repeat' }}
-              />
+              <Icon className="footer-icon" type="tongji-copy" />
             }
             title="票数统计"
             key="票数统计"
-            dot
             selected={this.state.selectedTab === 'greenTab'}
             onPress={() => {
               this.setState({
