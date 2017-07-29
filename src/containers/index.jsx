@@ -10,7 +10,7 @@ class Index extends Component {
     return (
       <div>
         <Header />
-
+        <p>{this.props.index.record}</p>
         <span>React</span>
         <Link to="/admin">管理员</Link>
         <Footer />
@@ -19,4 +19,4 @@ class Index extends Component {
   }
 }
 
-export default Index;
+export default connect(({ index }) => ({ index }))(Index);

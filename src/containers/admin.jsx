@@ -7,7 +7,7 @@ class Admin extends Component {
     console.log(this.props);
     return (
       <div>
-        <p>Hello</p>
+        <p>{this.props.admin.record}</p>
 
         <Link to="/">返回主页</Link>
       </div>
@@ -15,4 +15,4 @@ class Admin extends Component {
   }
 }
 
-export default Admin;
+export default connect(({ admin }) => ({ admin }))(Admin);

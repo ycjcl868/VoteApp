@@ -1,7 +1,7 @@
 export default {
   namespace: 'index',
   state: {
-    record: 0,
+    record: 1,
     current: 0,
   },
 };

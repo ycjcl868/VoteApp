@@ -6,17 +6,14 @@ import React from 'react';
 import Index from './containers/index.jsx';
 import Admin from './containers/admin.jsx';
 
-import indexModel from './model/index.js';
-import adminModel from './model/admin.js';
-
 import './styles/style.less';
 
 
 const app = dva();
 
 // app.model();
-app.model(indexModel);
-app.model(adminModel);
+app.model(require('./model/index'));
+app.model(require('./model/admin'));
 
 app.router(({ history }) =>
   <Router history={history}>
