@@ -6,9 +6,6 @@ import React from 'react';
 import Index from './containers/index.jsx';
 import Admin from './containers/admin.jsx';
 
-import './styles/style.less';
-
-
 const app = dva({
   history: browserHistory,
 });

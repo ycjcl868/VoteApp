@@ -7,8 +7,17 @@ export default class Banner extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [ '', '', '' ],
-      initialHeight: 200,
+      data: [{
+        url: 'http://www.baidu.com',
+        img: 'http://movie.ycjcl.cc/img/banner3.png',
+      }, {
+        url: 'http://www.baidu.com',
+        img: 'http://movie.ycjcl.cc/img/banner2.png',
+      }, {
+        url: 'http://www.baidu.com',
+        img: 'http://movie.ycjcl.cc/img/banner1.png',
+      }],
+      // initialHeight: 200,
     };
   }
   render() {
@@ -16,7 +25,7 @@ export default class Banner extends Component {
     return (
       <div>
         <Carousel
-          className="my-carousel"
+          className="banner-carousel"
           autoplay={false}
           infinite
           selectedIndex={1}
@@ -24,11 +33,12 @@ export default class Banner extends Component {
           beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
           afterChange={index => console.log('slide to', index)}
         >
-          {this.state.data.map(ii => (
-            <a href="http://www.baidu.com" key={ii} style={hProp}>
+          {this.state.data.map((item, i) => (
+            <a href={item.url} key={i} style={hProp}>
               <img
-                src={`https://zos.alipayobjects.com/rmsportal/${ii || 'QcWDkUhvYIVEcvtosxMF'}.png`}
+                src={item.img}
                 alt="icon"
+                className="banner-img"
                 onLoad={() => {
                   // fire window resize event to change height
                   window.dispatchEvent(new Event('resize'));

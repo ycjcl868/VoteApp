@@ -1,0 +1,99 @@
+@import '../styles/parameters.less';
+
+.card-list {
+  .card-list-item {
+    background-color: #fff;
+    border-right: 1px dotted rgb(204, 204, 204);
+    position: relative;width: 50%;
+    width: 49%;
+    overflow: hidden;
+    margin-right: 0.05rem;
+    .card-list-item-wrapper {
+      .card-list-item-img {
+        img {
+          width: 100%;
+        }
+        .badge-text {
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 1;
+          transform: rotate(-45deg);
+          transform-origin: 45% 135%;
+          width: 1rem;
+          .am-badge-text {
+            border-radius: 0;
+          }
+        }
+      }
+      .card-list-item-title {
+        p {
+          font-size: .3rem;
+          .omit();
+          max-width: 2.2rem;
+          display: inline-block;
+          margin: 0;
+        }
+        .badge-num {
+          margin-left: .1rem;
+          vertical-align: text-top;
+        }
+      }
+      .card-list-item-info {
+        margin: .1rem 0;
+        p {
+          .words_limit(3);
+          margin: 0;
+          color: #777;
+          font-size: .2rem;
+        }
+      }
+      .card-list-item-category {
+        margin: .1rem 0;
+        .badge-category {
+          padding: 0 .1rem;
+          margin: 0.05rem 0;
+          .am-badge-text {
+            color: #ff7f0d;
+            border: 1px solid #ff7f0d;
+            border-radius: 0;
+            background-color: rgba(255,255,255,0);
+            padding: 0px 0.06rem;
+          }
+
+        }
+      }
+      .card-list-item-btn-group {
+        padding: 0 .1rem;
+        .btn {
+          height: .6rem;
+          line-height: .6rem;
+          font-size: .3rem;
+          margin: .1rem 0;
+          i {
+            padding-right: .1rem;
+            font-size: .3rem;
+          }
+          &.btn-brief {
+            color: @primary-color;
+            border-color: @primary-color;
+            &:active, &:hover {
+              background-color: @primary-color;
+            }
+          }
+          &.btn-vote {
+            background-color: @primary-color;
+            border-color: @primary-color;
+            &:active, &:hover {
+              background-color: #1CA7DA;
+              border-color: #1CA7DA;
+            }
+          }
+        }
+        .model-description {
+          .words_limit(6);
+        }
+      }
+    }
+  }
+}
