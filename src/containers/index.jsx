@@ -21,7 +21,7 @@ class Index extends Component {
         <p>{this.props.index.record}</p>
         <span>React</span>
         <Link to="/admin">管理员</Link>
-        <Footer />
+        <Footer currentTab="index" />
       </div>
     );
   }

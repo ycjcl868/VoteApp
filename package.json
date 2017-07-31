@@ -49,7 +49,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "webpack && egg-bin dev",
+    "dev": "roadhog build && egg-bin dev",
     "dev:server": "egg-bin dev",
     "dev:client": "roadhog server",
     "build": "roadhog build",

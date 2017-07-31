@@ -8,12 +8,6 @@ import { Icon } from '../common';
 import './footer.less';
 
 class Footer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedTab: 'blueTab',
-    };
-  }
   render() {
     return (
       <div className="footer">
@@ -27,12 +21,9 @@ class Footer extends Component {
             key="电影列表"
             icon={<Icon className="footer-icon" type="dianying" />}
             selectedIcon={<Icon className="footer-icon" type="dianying" />}
-            selected={this.state.selectedTab === 'blueTab'}
+            selected={this.props.currentTab === 'index'}
             onPress={() => {
-              this.setState({
-                selectedTab: 'blueTab',
-              });
-              browserHistory.push('/admin');
+              browserHistory.push('/');
             }}
             data-seed="logId"
           >
@@ -44,13 +35,10 @@ class Footer extends Component {
             title="投票动态"
             key="投票动态"
             badge={5}
-            selected={this.state.selectedTab === 'redTab'}
+            selected={this.props.currentTab === 'news'}
             onPress={() => {
-              this.setState({
-                selectedTab: 'redTab',
-              });
+              browserHistory.push('/news');
             }}
-            data-seed="logId1"
           >
 
           </TabBar.Item>
@@ -63,11 +51,9 @@ class Footer extends Component {
             }
             title="票数统计"
             key="票数统计"
-            selected={this.state.selectedTab === 'greenTab'}
+            selected={this.props.currentTab === 'summary'}
             onPress={() => {
-              this.setState({
-                selectedTab: 'greenTab',
-              });
+              browserHistory.push('/summary');
             }}
           >
 

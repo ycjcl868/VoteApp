@@ -10,7 +10,7 @@ class Icon extends Component {
       iconfont: true,
       [`icon-${type}`]: true,
     });
-    return <i className={iconClassName} style={style} />
+    return <i className={iconClassName} style={style} />;
   }
 }
 
