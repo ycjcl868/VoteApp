@@ -9,12 +9,23 @@
 see [egg docs][egg] for more detail.
 
 ### Development
+
 ```shell
+# install the dependencies
 $ npm install
+```
+
+```shell
+# Front-End debug
+$ npm run dev:client
+$ open http://localhost:8000/
+```
+
+```shell
+# Front-End + Egg backend
 $ npm run dev
 $ open http://localhost:7001/news
 ```
-
 ### Deploy
 
 Use `EGG_SERVER_ENV=prod` to enable prod mode
