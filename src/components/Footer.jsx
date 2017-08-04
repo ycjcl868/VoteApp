@@ -9,6 +9,8 @@ import './footer.less';
 
 class Footer extends Component {
   render() {
+    const { logNum } = this.props;
+
     return (
       <div className="footer">
         <TabBar
@@ -34,7 +36,7 @@ class Footer extends Component {
             selectedIcon={<Icon className="footer-icon" type="dongtai" />}
             title="投票动态"
             key="投票动态"
-            badge={5}
+            badge={logNum}
             selected={this.props.currentTab === 'news'}
             onPress={() => {
               browserHistory.push('/news');

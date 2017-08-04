@@ -1,71 +1,82 @@
 import React, { Component } from 'react';
 
 import {
+  ResponsiveContainer,
   LineChart,
+  Legend,
   Line,
   CartesianGrid,
   XAxis,
   YAxis,
+  BarChart,
+  Bar,
+  Pie,
+  Cell,
+  PieChart,
   Tooltip,
-  Legend,
 } from 'recharts';
 
 import './chart.less';
 
 const data = [
   {
-    name: 'Page A',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
+    name: '长城',
+    num: 300,
   }, {
-    name: 'Page B',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
+    name: '战狼2',
+    num: 3000,
   }, {
-    name: 'Page C',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
+    name: '摆渡人',
+    num: 2000,
   }, {
-    name: 'Page D',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  }, {
-    name: 'Page E',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  }, {
-    name: 'Page F',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  }, {
-    name: 'Page G',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
+    name: '建国大业',
+    num: 1000,
   },
 ];
 
 class Chart extends Component {
   render() {
     return (
-      <div className="cardlist">
-        Test Chart
-        <LineChart width={600} height={300} data={data}
-              margin={{top: 5, right: 30, left: 20, bottom: 5}}>
-        <XAxis dataKey="name"/>
-          <YAxis />
-          <CartesianGrid strokeDasharray="3 3"/>
-          <Tooltip />
-          <Legend />
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }}/>
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-        </LineChart>
+      <div className="chart">
+        <h2 className="chart-title">各项电影得票图</h2>
+        <ResponsiveContainer width="100%" height={380}>
+          <LineChart data={data}
+            margin={{ top: 50, right: 30, left: 20, bottom: 5 }}>
+            <XAxis dataKey="name" />
+            <YAxis />
+
+            <CartesianGrid strokeDasharray="3 3" />
+            <Tooltip />
+            <Legend />
+            <Line
+              label={{ fill: '#808080', fontSize: '.3rem' }}
+              animationBegin={0}
+              animationDuration={500}
+              strokeWidth={2}
+              type="linear"
+              dataKey="num"
+              name="投票数"
+              stroke="#8884d8"
+            />
+          </LineChart>
+        </ResponsiveContainer>
+
+        <h2 className="chart-title">各项电影得票图</h2>
+        <ResponsiveContainer width="100%" height={380}>
+          <BarChart data={data}>
+            <XAxis dataKey="name" />
+            <YAxis />
+            <CartesianGrid strokeDasharray="3 3" />
+            <Tooltip />
+            <Legend />
+            <Bar
+              dataKey="num"
+              name="投票数"
+              fill="#8884d8"
+              label={{ fill: '#fff', fontSize: '.3rem' }}
+            />
+          </BarChart>
+        </ResponsiveContainer>
       </div>
     );
   }

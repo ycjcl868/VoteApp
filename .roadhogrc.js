@@ -22,9 +22,30 @@ export default {
     "@font-family": "'Helvetica Neue',Helvetica,'Hiragino Sans GB','Microsoft YaHei','微软雅黑',Arial,sans-serif"
   },
   proxy: {
-    "/news.do": {
-      target: "http://119.29.0.179/VoteSystem/cine",
+    "/api/getMovie": {
+      target: "http://119.29.0.179/VoteSystem/cine/news.do",
       changeOrigin: true,
+      pathRewrite: { "^/api/getMovie" : "" }
+    },
+    "/api/getSummary": {
+      target: "http://119.29.0.179/VoteSystem/obtain/data.do",
+      changeOrigin: true,
+      pathRewrite: { "^/api/getSummary" : "" }
+    },
+    "/api/getLogNum": {
+      target: "http://119.29.0.179/VoteSystem/info/count.do",
+      changeOrigin: true,
+      pathRewrite: { "^/api/getLogNum" : "" }
+    },
+    "/api/getLog": {
+      target: "http://119.29.0.179/VoteSystem/info/news.do",
+      changeOrigin: true,
+      pathRewrite: { "^/api/getLog" : "" }
+    },
+    "/api/doVote": {
+      target: "http://119.29.0.179/VoteSystem/user/poll.do",
+      changeOrigin: true,
+      pathRewrite: { "^/api/doVote" : "" }
     }
   },
   extraPostCSSPlugins: [],
