@@ -3,11 +3,11 @@ const svgSpriteDirs = [
   // path.resolve(__dirname, 'public/iconfont/'),  // 业务代码本地私有 svg 存放目录
 ];
 export default {
-  entry: "./src/index.js",
+  entry: "./src/pages/*.js",
   disableCSSModules: true,
   publicPath: "/",
   svgSpriteLoaderDirs: svgSpriteDirs,
-  outputPath: "./public",
+  outputPath: "./app/public/",
   extraBabelPlugins: [
     "transform-runtime",
     "dva-hmr",

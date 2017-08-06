@@ -8,13 +8,13 @@ export default class Banner extends Component {
     super(props);
     this.state = {
       data: [{
-        url: 'http://www.baidu.com',
+        url: '',
         img: 'http://movie.ycjcl.cc/img/banner3.png',
       }, {
-        url: 'http://www.baidu.com',
+        url: '',
         img: 'http://movie.ycjcl.cc/img/banner2.png',
       }, {
-        url: 'http://www.baidu.com',
+        url: '',
         img: 'http://movie.ycjcl.cc/img/banner1.png',
       }],
       // initialHeight: 200,
@@ -34,7 +34,7 @@ export default class Banner extends Component {
           afterChange={index => console.log('slide to', index)}
         >
           {this.state.data.map((item, i) => (
-            <a href={item.url} key={i} style={hProp}>
+            <a href={item.url !== '' ? item.url : 'javascript:;'} key={i} style={hProp}>
               <img
                 src={item.img}
                 alt="icon"
