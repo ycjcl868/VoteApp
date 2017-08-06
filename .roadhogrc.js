@@ -23,7 +23,7 @@ export default {
   },
   proxy: {
     "/api/getMovie": {
-      target: "http://119.29.0.179/VoteSystem/cine/news.do",
+      target: "https://easy-mock.com/mock/59714774a1d30433d8391e7c/voteSystem/cine/news.do",
       changeOrigin: true,
       pathRewrite: { "^/api/getMovie" : "" }
     },
@@ -33,7 +33,7 @@ export default {
       pathRewrite: { "^/api/getSummary" : "" }
     },
     "/api/getLogNum": {
-      target: "http://119.29.0.179/VoteSystem/info/count.do",
+      target: "https://easy-mock.com/mock/59714774a1d30433d8391e7c/voteSystem/cine/getLogNum",
       changeOrigin: true,
       pathRewrite: { "^/api/getLogNum" : "" }
     },

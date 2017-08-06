@@ -21,11 +21,13 @@ class CardList extends Component {
             <Card
               key={i}
               cineId={movie.cineId}
+              movieImage={movie.url}
               title={movie.cineName}
               voteNum={movie.ticket}
               publishDate={movie.publishTime}
               description={movie.des}
               category={movie.type}
+              isNew={movie.isNew}
             />
          )}
      </Flex>

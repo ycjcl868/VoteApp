@@ -30,8 +30,10 @@ class Card extends Component {
       title,
       voteNum,
       publishDate,
+      movieImage,
       description,
       category,
+      isNew,
       className,
       style,
     } = this.props;
@@ -47,8 +49,8 @@ class Card extends Component {
         <WingBlank className="card-wingblank">
           <div className="card-list-item-wrapper">
             <div className="card-list-item-img">
-              <img src="http://movie.ycjcl.cc/img/banner3.png" alt=""/>
-              <Badge className="badge-text" text={'新'} />
+              <img src={movieImage} alt=""/>
+              <Badge className="badge-text" text={`${isNew ? '新' : ''}`} />
             </div>
             <div className="card-list-item-title">
               <p>{title}</p>

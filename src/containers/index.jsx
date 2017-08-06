@@ -15,16 +15,11 @@ class Index extends Component {
     const { logNum, status } = this.props.index;
     return (
       <div>
-        {status < 0 ?
-          Toast.loading('加载中...') :
-          (<div>
             <Header />
             <Banner />
             <Search />
             <CardList {...this.props} />
             <Footer logNum={logNum} currentTab="index" />
-          </div>)
-        }
       </div>
     );
   }

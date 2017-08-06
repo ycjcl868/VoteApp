@@ -9,7 +9,7 @@ import './footer.less';
 
 class Footer extends Component {
   render() {
-    const { logNum } = this.props;
+    const { logNum = 0 } = this.props;
 
     return (
       <div className="footer">
