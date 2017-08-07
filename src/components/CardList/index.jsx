@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { Flex } from 'antd-mobile';
 
-import { Card } from '../common';
+import { Card } from '../../common';
 
 import './cardlist.less';
 

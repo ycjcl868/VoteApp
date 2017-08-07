@@ -10,9 +10,6 @@ import {
   YAxis,
   BarChart,
   Bar,
-  Pie,
-  Cell,
-  PieChart,
   Tooltip,
 } from 'recharts';
 

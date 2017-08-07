@@ -3,7 +3,7 @@ import { TabBar } from 'antd-mobile';
 import { browserHistory } from 'dva/router';
 
 
-import { Icon } from '../common';
+import { Icon } from '../../common';
 
 import './footer.less';
 

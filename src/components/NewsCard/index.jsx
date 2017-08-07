@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Badge } from 'antd-mobile';
-import { browserHistory } from 'dva/router';
 
 
-import { Icon } from '../common';
+import { Icon } from '../../common';
 
 import './newscard.less';
 

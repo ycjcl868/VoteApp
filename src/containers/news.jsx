@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'dva';
 import { Link } from 'dva/router';
 
-import Header from '../components/Header.jsx';
-import NewsCard from '../components/NewsCard.jsx';
-import Footer from '../components/Footer.jsx';
+import Header from '../components/Header';
+import NewsCard from '../components/NewsCard';
+import Footer from '../components/Footer';
 
 import '../styles/style.less';
 class News extends Component {

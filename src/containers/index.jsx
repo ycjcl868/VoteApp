@@ -3,11 +3,11 @@ import { connect } from 'dva';
 import { Toast } from 'antd-mobile';
 
 
-import Header from '../components/Header.jsx';
-import Banner from '../components/Banner.jsx';
-import Search from '../components/Search.jsx';
-import CardList from '../components/CardList.jsx';
-import Footer from '../components/Footer.jsx';
+import Header from '../components/Header';
+import Banner from '../components/Banner';
+import Search from '../components/Search';
+import CardList from '../components/CardList';
+import Footer from '../components/Footer';
 
 import '../styles/style.less';
 class Index extends Component {
@@ -15,11 +15,11 @@ class Index extends Component {
     const { logNum, status } = this.props.index;
     return (
       <div>
-            <Header />
-            <Banner />
-            <Search />
-            <CardList {...this.props} />
-            <Footer logNum={logNum} currentTab="index" />
+          <Header />
+          <Banner />
+          <Search />
+          <CardList {...this.props} />
+          <Footer logNum={logNum} currentTab="index" />
       </div>
     );
   }
