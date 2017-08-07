@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
 import { Layout, Breadcrumb } from 'antd';
-const { Header, Content } = Layout;
+const { Content } = Layout;
 
 import { connect } from 'dva';
 
 import AdminSider from '../components/AdminSider/';
+import AdminNav from '../components/AdminNav/';
 import Welcome from '../components/Welcome/';
 import Footer from '../components/AdminFooter/';
 
@@ -17,7 +18,7 @@ class Admin extends Component {
       <Layout className="ant-layout-has-sider admin-layout">
         <AdminSider />
         <Layout>
-          <Header style={{ background: '#fff', padding: 0 }} />
+          <AdminNav />
           <Content style={{ margin: '0 16px' }}>
             <Breadcrumb style={{ margin: '12px 0' }}>
               <Breadcrumb.Item>User</Breadcrumb.Item>
