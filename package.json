@@ -69,7 +69,7 @@
     "autod": "autod"
   },
   "ci": {
-    "version": "6, 8"
+    "version": "6,7,8"
   },
   "repository": {
     "type": "git",
