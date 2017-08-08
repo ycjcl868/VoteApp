@@ -6,9 +6,6 @@ coverage/
 run/
 .DS_Store
 *.swp
-app/public/uploads/*
-app/public/iconfont
-app/public/*.html
-app/public/*.js
-app/public/*.css
-public/*
+public/.gitignore
+app/public/.gitignore
+Temp/
