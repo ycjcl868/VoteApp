@@ -8,6 +8,12 @@ module.exports = app => {
         page: 'index',
       });
     }
+    * upload() {
+      yield this.ctx.render('upload', {
+        title: '上传页面',
+        page: 'upload',
+      });
+    }
   }
   return HomeController;
 };

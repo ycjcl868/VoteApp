@@ -10,4 +10,8 @@ exports.nunjucks = {
   enable: true,
   package: 'egg-view-nunjucks',
 };
+exports.oss = {
+  enable: true,
+  package: 'egg-oss',
+};
 exports.static = true;
