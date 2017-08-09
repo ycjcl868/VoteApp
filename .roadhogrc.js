@@ -22,30 +22,30 @@ export default {
     "@font-family": "'Helvetica Neue',Helvetica,'Hiragino Sans GB','Microsoft YaHei','微软雅黑',Arial,sans-serif"
   },
   proxy: {
-    "/api/getMovie": {
+    "/api/v1/movies": {
       target: "https://easy-mock.com/mock/59714774a1d30433d8391e7c/voteSystem/cine/news.do",
       changeOrigin: true,
-      pathRewrite: { "^/api/getMovie" : "" }
+      pathRewrite: { "^/api/v1/movies" : "" }
     },
-    "/api/getSummary": {
+    "/api/v1/summary": {
       target: "http://119.29.0.179/VoteSystem/obtain/data.do",
       changeOrigin: true,
-      pathRewrite: { "^/api/getSummary" : "" }
+      pathRewrite: { "^/api/v1/summary" : "" }
     },
-    "/api/getLogNum": {
+    "/api/v1/logNum": {
       target: "https://easy-mock.com/mock/59714774a1d30433d8391e7c/voteSystem/cine/getLogNum",
       changeOrigin: true,
-      pathRewrite: { "^/api/getLogNum" : "" }
+      pathRewrite: { "^/api/v1/logNum" : "" }
     },
-    "/api/getLog": {
+    "/api/v1/logs": {
       target: "http://119.29.0.179/VoteSystem/info/news.do",
       changeOrigin: true,
-      pathRewrite: { "^/api/getLog" : "" }
+      pathRewrite: { "^/api/v1/logs" : "" }
     },
-    "/api/doVote": {
+    "/api/v1/doVote": {
       target: "http://119.29.0.179/VoteSystem/user/poll.do",
       changeOrigin: true,
-      pathRewrite: { "^/api/doVote" : "" }
+      pathRewrite: { "^/api/v1/doVote" : "" }
     }
   },
   extraPostCSSPlugins: [],

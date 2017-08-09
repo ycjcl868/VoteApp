@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { TabBar } from 'antd-mobile';
-import { browserHistory } from 'dva/router';
+import { hashHistory } from 'dva/router';
 
 
 import { Icon } from '../../common';
@@ -25,7 +25,7 @@ class Footer extends Component {
             selectedIcon={<Icon className="footer-icon" type="dianying" />}
             selected={this.props.currentTab === 'index'}
             onPress={() => {
-              browserHistory.push('/');
+              hashHistory.push('/');
             }}
             data-seed="logId"
           >
@@ -39,7 +39,7 @@ class Footer extends Component {
             badge={logNum}
             selected={this.props.currentTab === 'news'}
             onPress={() => {
-              browserHistory.push('/news');
+              hashHistory.push('/news');
             }}
           >
 
@@ -55,7 +55,7 @@ class Footer extends Component {
             key="票数统计"
             selected={this.props.currentTab === 'summary'}
             onPress={() => {
-              browserHistory.push('/summary');
+              hashHistory.push('/summary');
             }}
           >
 

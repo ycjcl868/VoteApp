@@ -14,4 +14,8 @@ exports.oss = {
   enable: true,
   package: 'egg-oss',
 };
+exports.validate = {
+  enable: true,
+  package: 'egg-validate',
+};
 exports.static = true;

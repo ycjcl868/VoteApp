@@ -10,8 +10,8 @@ module.exports = function* () {
   const streamFile = stream.filename.split('.');
   const len = streamFile.length;
   const filename = `${uuidv4(streamFile[len - 2])}.${streamFile[len - 1]}`;
-  console.log(filename);
-  console.log(stream);
+  // console.log(filename);
+  // console.log(stream);
   let filepath = path.join(this.app.config.baseDir, `app/public/uploads/${filename}`);
   if (stream.fields.title === 'mock-error') {
     filepath = path.join(this.app.config.baseDir, `app/public/uploads/not-exists/dir/${filename}`);
@@ -38,7 +38,7 @@ function saveStream(stream, filepath) {
     if (filepath.indexOf('/read-error-') > 0) {
       stream.once('readable', () => {
         const buf = stream.read(10240);
-        console.log('read %d bytes', buf.length);
+        // console.log('read %d bytes', buf.length);
         setTimeout(() => {
           reject(new Error('mock read error'));
         }, 1000);

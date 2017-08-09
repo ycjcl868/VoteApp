@@ -27,6 +27,7 @@ describe('example multipart test', () => {
       .expect(200)
       .expect(/file: <input name="file" type="file" \/>/)
       .expect(res => {
+        console.log(res.headers, res.text);
         cookies = res.headers['set-cookie'].join(';');
         csrfToken = cookies.match(/csrfToken=(.*?);/)[1];
         host = `http://127.0.0.1:${server.address().port}`;
@@ -49,6 +50,7 @@ describe('example multipart test', () => {
     }, (err, data, res) => {
       assert(!err, err && err.message);
       assert.equal(res.statusCode, 200);
+      console.log(data);
       done();
     });
   });
