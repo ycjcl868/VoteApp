@@ -7,5 +7,4 @@ node_js:
 install:
   - npm i npminstall && npminstall
 script:
-  - npm run build
   - npm run test-local
