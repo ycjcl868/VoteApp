@@ -1,0 +1,291 @@
+{
+  "keys": "/Users/jcl/Desktop/Kylin_King/github/voteApp/config/config.default.js",
+  "proxyworker": {
+    "port": "/Users/jcl/Desktop/Kylin_King/github/voteApp/config/config.default.js"
+  },
+  "view": {
+    "defaultViewEngine": "/Users/jcl/Desktop/Kylin_King/github/voteApp/config/config.default.js",
+    "defaultExtension": "/Users/jcl/Desktop/Kylin_King/github/voteApp/config/config.default.js",
+    "root": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-view@1.1.2@egg-view/config/config.default.js",
+    "cache": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-view@1.1.2@egg-view/config/config.default.js",
+    "mapping": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-view@1.1.2@egg-view/config/config.default.js"
+  },
+  "static": {
+    "prefix": "/Users/jcl/Desktop/Kylin_King/github/voteApp/config/config.default.js",
+    "dir": "/Users/jcl/Desktop/Kylin_King/github/voteApp/config/config.default.js",
+    "dynamic": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-static@1.4.1@egg-static/config/config.default.js",
+    "preload": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-static@1.4.1@egg-static/config/config.default.js",
+    "buffer": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-static@1.4.1@egg-static/config/config.default.js",
+    "maxFiles": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-static@1.4.1@egg-static/config/config.default.js"
+  },
+  "oss": {
+    "client": {
+      "accessKeyId": "/Users/jcl/Desktop/Kylin_King/github/voteApp/config/config.default.js",
+      "accessKeySecret": "/Users/jcl/Desktop/Kylin_King/github/voteApp/config/config.default.js",
+      "bucket": "/Users/jcl/Desktop/Kylin_King/github/voteApp/config/config.default.js",
+      "endpoint": "/Users/jcl/Desktop/Kylin_King/github/voteApp/config/config.default.js",
+      "timeout": "/Users/jcl/Desktop/Kylin_King/github/voteApp/config/config.default.js"
+    },
+    "default": {
+      "timeout": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-oss@1.0.2@egg-oss/config/config.default.js"
+    },
+    "useAgent": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-oss@1.0.2@egg-oss/config/config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-onerror@1.5.0@egg-onerror/config/config.default.js",
+    "appErrorFilter": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-onerror@1.5.0@egg-onerror/config/config.default.js"
+  },
+  "session": {
+    "maxAge": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-session@2.1.1@egg-session/config/config.default.js",
+    "key": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-session@2.1.1@egg-session/config/config.default.js",
+    "httpOnly": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-session@2.1.1@egg-session/config/config.default.js",
+    "encrypt": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-session@2.1.1@egg-session/config/config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-i18n@1.1.1@egg-i18n/config/config.default.js",
+    "dirs": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-i18n@1.1.1@egg-i18n/config/config.default.js",
+    "queryField": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-i18n@1.1.1@egg-i18n/config/config.default.js",
+    "cookieField": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-i18n@1.1.1@egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-i18n@1.1.1@egg-i18n/config/config.default.js"
+  },
+  "watcher": {
+    "type": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-watcher@2.1.3@egg-watcher/config/config.unittest.js",
+    "eventSources": {
+      "default": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-watcher@2.1.3@egg-watcher/config/config.default.js",
+      "development": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-watcher@2.1.3@egg-watcher/config/config.default.js"
+    }
+  },
+  "multipart": {
+    "autoFields": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-multipart@1.5.0@egg-multipart/config/config.default.js",
+    "defaultCharset": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-multipart@1.5.0@egg-multipart/config/config.default.js",
+    "fieldNameSize": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-multipart@1.5.0@egg-multipart/config/config.default.js",
+    "fieldSize": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-multipart@1.5.0@egg-multipart/config/config.default.js",
+    "fields": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-multipart@1.5.0@egg-multipart/config/config.default.js",
+    "fileSize": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-multipart@1.5.0@egg-multipart/config/config.default.js",
+    "files": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-multipart@1.5.0@egg-multipart/config/config.default.js",
+    "fileExtensions": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-multipart@1.5.0@egg-multipart/config/config.default.js",
+    "whitelist": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-multipart@1.5.0@egg-multipart/config/config.default.js"
+  },
+  "security": {
+    "domainWhiteList": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js",
+    "protocolWhiteList": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js",
+    "defaultMiddleware": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js",
+    "csrf": {
+      "enable": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js",
+      "useSession": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js",
+      "ignoreJSON": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js",
+      "cookieName": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js",
+      "sessionName": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js",
+      "headerName": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js",
+      "bodyName": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js",
+      "queryName": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js"
+    },
+    "xframe": {
+      "enable": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js",
+      "value": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js",
+      "maxAge": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js",
+      "includeSubdomains": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js",
+      "value": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js",
+      "policy": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js"
+    }
+  },
+  "helper": {
+    "shtml": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security/config/config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-logrotator@2.2.3@egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-logrotator@2.2.3@egg-logrotator/config/config.default.js",
+    "maxFileSize": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-logrotator@2.2.3@egg-logrotator/config/config.default.js",
+    "maxFiles": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-logrotator@2.2.3@egg-logrotator/config/config.default.js",
+    "rotateDuration": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-logrotator@2.2.3@egg-logrotator/config/config.default.js",
+    "maxDays": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-logrotator@2.2.3@egg-logrotator/config/config.default.js"
+  },
+  "jsonp": {
+    "limit": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-jsonp@1.1.2@egg-jsonp/config/config.default.js",
+    "callback": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-jsonp@1.1.2@egg-jsonp/config/config.default.js",
+    "csrf": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-jsonp@1.1.2@egg-jsonp/config/config.default.js"
+  },
+  "nunjucks": {
+    "autoescape": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-view-nunjucks@2.1.3@egg-view-nunjucks/config/config.default.js",
+    "throwOnUndefined": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-view-nunjucks@2.1.3@egg-view-nunjucks/config/config.default.js",
+    "trimBlocks": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-view-nunjucks@2.1.3@egg-view-nunjucks/config/config.default.js",
+    "lstripBlocks": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-view-nunjucks@2.1.3@egg-view-nunjucks/config/config.default.js",
+    "cache": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-view-nunjucks@2.1.3@egg-view-nunjucks/config/config.default.js"
+  },
+  "env": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+  "name": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+  "proxy": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+  "protocolHeaders": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+  "ipHeaders": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+  "hostHeaders": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+  "pkg": {
+    "name": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "version": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "description": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "private": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "dependencies": {
+      "antd": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "antd-mobile": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "babel-cli": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "babel-core": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "babel-preset-es2015": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "babel-preset-react": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "babel-runtime": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "classnames": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "dva": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "egg": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "egg-development-proxyworker": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "egg-multipart": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "egg-oss": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "egg-static": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "egg-validate": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "egg-view-nunjucks": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "formstream": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "i": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "npm": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "prop-types": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "react": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "react-dom": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "recharts": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "stream-wormhole": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "uuid": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js"
+    },
+    "devDependencies": {
+      "autod": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "autod-egg": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "babel-eslint": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "babel-plugin-dva-hmr": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "babel-plugin-import": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "babel-plugin-transform-runtime": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "del": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "egg-bin": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "egg-ci": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "egg-mock": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "eslint": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "eslint-config-egg": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "eslint-plugin-import": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "eslint-plugin-jsx-a11y": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "eslint-plugin-react": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "roadhog": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "supertest": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "webstorm-disable-index": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js"
+    },
+    "entry": {
+      "home": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js"
+    },
+    "engines": {
+      "node": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js"
+    },
+    "scripts": {
+      "start": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "dev": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "dev:server": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "dev:client": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "build": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "test": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "test-local": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "cov": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "lint": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "ci": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "autod": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js"
+    },
+    "ci": {
+      "version": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js"
+    },
+    "repository": {
+      "type": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "url": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js"
+    },
+    "author": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "license": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js"
+  },
+  "baseDir": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+  "HOME": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+  "rundir": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+  "dump": {
+    "ignore": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "notFound": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "sitefile": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "middlewares": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "httpClient": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js"
+  },
+  "bodyParser": {
+    "enable": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "encoding": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "formLimit": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "jsonLimit": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "strict": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "depth": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "parameterLimit": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js"
+    }
+  },
+  "logger": {
+    "dir": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "encoding": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "env": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "level": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "consoleLevel": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.unittest.js",
+    "disableConsoleAfterReady": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "outputJSON": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "buffer": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.unittest.js",
+    "appLogName": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "coreLogName": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "agentLogName": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "errorLogName": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "coreLogger": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "dnsCacheMaxLength": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "dnsCacheMaxAge": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+    "request": {
+      "timeout": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "freeSocketKeepAliveTimeout": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "maxSockets": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "maxFreeSockets": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "freeSocketKeepAliveTimeout": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "maxSockets": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+      "maxFreeSockets": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js"
+    }
+  },
+  "coreMiddleware": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js",
+  "workerStartTimeout": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/config.default.js"
+}

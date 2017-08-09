@@ -1,0 +1,14 @@
+2017-08-09 09:52:45,007 INFO 70919 [egg:logger] init all loggers with options: {"dir":"/Users/jcl/Desktop/Kylin_King/github/voteApp/logs/voteApp","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","disableConsoleAfterReady":false,"outputJSON":false,"buffer":false,"appLogName":"voteApp-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"application"}
+2017-08-09 09:52:45,012 INFO 70919 [egg-schedule]: register schedule egg-schedule:/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-logrotator@2.2.3@egg-logrotator/app/schedule/clean_log.js
+2017-08-09 09:52:45,012 INFO 70919 [egg-schedule]: register schedule egg-schedule:/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-logrotator@2.2.3@egg-logrotator/app/schedule/rotate_by_file.js
+2017-08-09 09:52:45,025 INFO 70919 [egg-static] starting static serve / -> /Users/jcl/Desktop/Kylin_King/github/voteApp/public
+2017-08-09 09:52:45,026 INFO 70919 [egg-security] use csrf middleware
+2017-08-09 09:52:45,026 INFO 70919 [egg-security] use methodnoallow middleware
+2017-08-09 09:52:45,026 INFO 70919 [egg-security] use noopen middleware
+2017-08-09 09:52:45,026 INFO 70919 [egg-security] use nosniff middleware
+2017-08-09 09:52:45,027 INFO 70919 [egg-security] use xssProtection middleware
+2017-08-09 09:52:45,027 INFO 70919 [egg-security] use xframe middleware
+2017-08-09 09:52:45,027 INFO 70919 [egg-security] use dta middleware
+2017-08-09 09:52:45,027 INFO 70919 [egg-security] compose 7 middlewares into one security middleware
+2017-08-09 09:52:45,042 INFO 70919 [egg-watcher:app] watcher start success
+2017-08-09 09:52:45,061 INFO 70919 [egg-view-nunjucks] loading templates from ["/Users/jcl/Desktop/Kylin_King/github/voteApp/app/view"]

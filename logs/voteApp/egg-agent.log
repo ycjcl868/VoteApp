@@ -1,0 +1,2 @@
+2017-08-09 09:52:44,962 INFO 70919 [egg:logger] init all loggers with options: {"dir":"/Users/jcl/Desktop/Kylin_King/github/voteApp/logs/voteApp","encoding":"utf8","env":"unittest","level":"INFO","consoleLevel":"WARN","disableConsoleAfterReady":false,"outputJSON":false,"buffer":false,"appLogName":"voteApp-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{},"type":"agent"}
+2017-08-09 09:52:44,973 INFO 70919 [egg-watcher:agent] watcher start success

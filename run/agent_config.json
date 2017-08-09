@@ -1,0 +1,486 @@
+{
+  "config": {
+    "onerror": {
+      "errorPageUrl": "",
+      "appErrorFilter": null
+    },
+    "session": {
+      "maxAge": 86400000,
+      "key": "EGG_SESS",
+      "httpOnly": true,
+      "encrypt": true
+    },
+    "i18n": {
+      "defaultLocale": "en_US",
+      "dirs": [],
+      "queryField": "locale",
+      "cookieField": "locale",
+      "cookieMaxAge": "1y"
+    },
+    "watcher": {
+      "type": "development",
+      "eventSources": {
+        "default": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-watcher@2.1.3@egg-watcher/lib/event-sources/default",
+        "development": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-watcher@2.1.3@egg-watcher/lib/event-sources/development"
+      }
+    },
+    "multipart": {
+      "autoFields": false,
+      "defaultCharset": "utf8",
+      "fieldNameSize": 100,
+      "fieldSize": "100kb",
+      "fields": 10,
+      "fileSize": "10mb",
+      "files": 10,
+      "fileExtensions": [],
+      "whitelist": null
+    },
+    "security": {
+      "domainWhiteList": [],
+      "protocolWhiteList": [],
+      "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
+      "csrf": {
+        "enable": true,
+        "useSession": false,
+        "ignoreJSON": false,
+        "cookieName": "csrfToken",
+        "sessionName": "csrfToken",
+        "headerName": "x-csrf-token",
+        "bodyName": "_csrf",
+        "queryName": "_csrf"
+      },
+      "xframe": {
+        "enable": true,
+        "value": "SAMEORIGIN"
+      },
+      "hsts": {
+        "enable": false,
+        "maxAge": 31536000,
+        "includeSubdomains": false
+      },
+      "dta": {
+        "enable": true
+      },
+      "methodnoallow": {
+        "enable": true
+      },
+      "noopen": {
+        "enable": true
+      },
+      "nosniff": {
+        "enable": true
+      },
+      "xssProtection": {
+        "enable": true,
+        "value": "1; mode=block"
+      },
+      "csp": {
+        "enable": false,
+        "policy": {}
+      }
+    },
+    "helper": {
+      "shtml": {}
+    },
+    "logrotator": {
+      "filesRotateByHour": null,
+      "filesRotateBySize": null,
+      "maxFileSize": 52428800,
+      "maxFiles": 10,
+      "rotateDuration": 60000,
+      "maxDays": 31
+    },
+    "static": {
+      "prefix": "/",
+      "dir": "/Users/jcl/Desktop/Kylin_King/github/voteApp/public",
+      "dynamic": true,
+      "preload": false,
+      "buffer": false,
+      "maxFiles": 1000
+    },
+    "jsonp": {
+      "limit": 50,
+      "callback": [
+        "_callback",
+        "callback"
+      ],
+      "csrf": false
+    },
+    "view": {
+      "root": "/Users/jcl/Desktop/Kylin_King/github/voteApp/app/view",
+      "cache": true,
+      "defaultExtension": ".html",
+      "defaultViewEngine": "nunjucks",
+      "mapping": {}
+    },
+    "nunjucks": {
+      "autoescape": true,
+      "throwOnUndefined": false,
+      "trimBlocks": false,
+      "lstripBlocks": false,
+      "cache": true
+    },
+    "oss": {
+      "default": {
+        "timeout": "60s"
+      },
+      "useAgent": false,
+      "client": {
+        "accessKeyId": "PAK7pKKWWB26rbEAB8dCNqwVGkzCjpC9lSB7NPV4",
+        "accessKeySecret": "<String len: 40>",
+        "bucket": "voteapp",
+        "endpoint": "ouctvmn23.bkt.clouddn.com",
+        "timeout": "60s"
+      }
+    },
+    "env": "unittest",
+    "name": "voteApp",
+    "keys": "<String len: 26>",
+    "proxy": false,
+    "protocolHeaders": "x-forwarded-proto",
+    "ipHeaders": "x-forwarded-for",
+    "hostHeaders": "x-forwarded-host",
+    "pkg": {
+      "name": "voteApp",
+      "version": "1.0.0",
+      "description": "",
+      "private": true,
+      "dependencies": {
+        "antd": "2.9.1",
+        "antd-mobile": "^1.4.1",
+        "babel-cli": "^6.11.4",
+        "babel-core": "^6.13.2",
+        "babel-preset-es2015": "^6.13.2",
+        "babel-preset-react": "^6.11.1",
+        "babel-runtime": "^6.25.0",
+        "classnames": "^2.2.5",
+        "dva": "^1.2.1",
+        "egg": "^1.4.0",
+        "egg-development-proxyworker": "^1.1.0",
+        "egg-multipart": "^1.5.0",
+        "egg-oss": "^1.0.2",
+        "egg-static": "^1.4.1",
+        "egg-validate": "^1.0.0",
+        "egg-view-nunjucks": "^2.1.3",
+        "formstream": "^1.1.0",
+        "i": "^0.3.5",
+        "npm": "^5.3.0",
+        "prop-types": "^15.5.10",
+        "react": "^15.3.2",
+        "react-dom": "^15.3.2",
+        "recharts": "^1.0.0-alpha.2",
+        "stream-wormhole": "^1.0.3",
+        "uuid": "^3.1.0"
+      },
+      "devDependencies": {
+        "autod": "^2.8.0",
+        "autod-egg": "^1.0.0",
+        "babel-eslint": "^7.2.3",
+        "babel-plugin-dva-hmr": "^0.3.2",
+        "babel-plugin-import": "^1.2.1",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "del": "^3.0.0",
+        "egg-bin": "^3.4.0",
+        "egg-ci": "^1.6.0",
+        "egg-mock": "^3.7.0",
+        "eslint": "^3.19.0",
+        "eslint-config-egg": "^4.2.0",
+        "eslint-plugin-import": "^2.0.1",
+        "eslint-plugin-jsx-a11y": "^2.2.0",
+        "eslint-plugin-react": "^6.2.0",
+        "roadhog": "^0.6.0",
+        "supertest": "^3.0.0",
+        "webstorm-disable-index": "^1.2.0"
+      },
+      "entry": {
+        "home": "./src/index.js"
+      },
+      "engines": {
+        "node": ">=6.0.0"
+      },
+      "scripts": {
+        "start": "node index.js",
+        "dev": "roadhog build && egg-bin dev",
+        "dev:server": "egg-bin dev",
+        "dev:client": "roadhog server",
+        "build": "roadhog build",
+        "test": "npm run lint -- --fix && npm run test-local",
+        "test-local": "egg-bin test",
+        "cov": "egg-bin cov",
+        "lint": "eslint .",
+        "ci": "npm run lint && npm run cov",
+        "autod": "autod"
+      },
+      "ci": {
+        "version": "6,7,8"
+      },
+      "repository": {
+        "type": "git",
+        "url": ""
+      },
+      "author": "",
+      "license": "MIT"
+    },
+    "baseDir": "/Users/jcl/Desktop/Kylin_King/github/voteApp",
+    "HOME": "/Users/jcl",
+    "rundir": "/Users/jcl/Desktop/Kylin_King/github/voteApp/run",
+    "dump": {
+      "ignore": "<Set>"
+    },
+    "confusedConfigurations": {
+      "bodyparser": "bodyParser",
+      "notFound": "notfound",
+      "sitefile": "siteFile",
+      "middlewares": "middleware",
+      "httpClient": "httpclient"
+    },
+    "notfound": {
+      "pageUrl": ""
+    },
+    "siteFile": {
+      "/favicon.ico": "<Buffer len: 14191>"
+    },
+    "bodyParser": {
+      "enable": true,
+      "encoding": "utf8",
+      "formLimit": "100kb",
+      "jsonLimit": "100kb",
+      "strict": true,
+      "queryString": {
+        "arrayLimit": 100,
+        "depth": 5,
+        "parameterLimit": 1000
+      }
+    },
+    "logger": {
+      "dir": "/Users/jcl/Desktop/Kylin_King/github/voteApp/logs/voteApp",
+      "encoding": "utf8",
+      "env": "unittest",
+      "level": "INFO",
+      "consoleLevel": "WARN",
+      "disableConsoleAfterReady": false,
+      "outputJSON": false,
+      "buffer": false,
+      "appLogName": "voteApp-web.log",
+      "coreLogName": "egg-web.log",
+      "agentLogName": "egg-agent.log",
+      "errorLogName": "common-error.log",
+      "coreLogger": {},
+      "type": "agent"
+    },
+    "httpclient": {
+      "enableDNSCache": false,
+      "dnsCacheMaxLength": 1000,
+      "dnsCacheMaxAge": 10000,
+      "request": {
+        "timeout": 5000
+      },
+      "httpAgent": {
+        "keepAlive": true,
+        "freeSocketKeepAliveTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      },
+      "httpsAgent": {
+        "keepAlive": true,
+        "freeSocketKeepAliveTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      }
+    },
+    "coreMiddleware": [
+      "meta",
+      "siteFile",
+      "notfound",
+      "bodyParser",
+      "overrideMethod"
+    ],
+    "workerStartTimeout": 600000,
+    "proxyworker": {
+      "port": 10086
+    },
+    "coreMiddlewares": [
+      "meta",
+      "siteFile",
+      "notfound",
+      "bodyParser",
+      "overrideMethod"
+    ],
+    "appMiddlewares": [],
+    "appMiddleware": []
+  },
+  "plugins": {
+    "onerror": {
+      "enable": true,
+      "package": "egg-onerror",
+      "name": "onerror",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/plugin.js",
+      "path": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-onerror@1.5.0@egg-onerror",
+      "version": "1.5.0"
+    },
+    "session": {
+      "enable": true,
+      "package": "egg-session",
+      "name": "session",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/plugin.js",
+      "path": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-session@2.1.1@egg-session",
+      "version": "2.1.1"
+    },
+    "i18n": {
+      "enable": true,
+      "package": "egg-i18n",
+      "name": "i18n",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/plugin.js",
+      "path": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-i18n@1.1.1@egg-i18n",
+      "version": "1.1.1"
+    },
+    "watcher": {
+      "enable": true,
+      "package": "egg-watcher",
+      "name": "watcher",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/plugin.js",
+      "path": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-watcher@2.1.3@egg-watcher",
+      "version": "2.1.3"
+    },
+    "multipart": {
+      "enable": true,
+      "package": "egg-multipart",
+      "name": "multipart",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/plugin.js",
+      "path": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-multipart@1.5.0@egg-multipart",
+      "version": "1.5.0"
+    },
+    "security": {
+      "enable": true,
+      "package": "egg-security",
+      "name": "security",
+      "dependencies": [],
+      "optionalDependencies": [
+        "session"
+      ],
+      "env": [],
+      "from": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/plugin.js",
+      "path": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-security@1.12.0@egg-security",
+      "version": "1.12.0"
+    },
+    "schedule": {
+      "enable": true,
+      "package": "egg-schedule",
+      "name": "schedule",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/plugin.js",
+      "path": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-schedule@2.4.1@egg-schedule",
+      "version": "2.4.1"
+    },
+    "logrotator": {
+      "enable": true,
+      "package": "egg-logrotator",
+      "name": "logrotator",
+      "dependencies": [
+        "schedule"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/plugin.js",
+      "path": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-logrotator@2.2.3@egg-logrotator",
+      "version": "2.2.3"
+    },
+    "static": {
+      "enable": true,
+      "package": "egg-static",
+      "name": "static",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jcl/Desktop/Kylin_King/github/voteApp/config/plugin.js",
+      "path": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-static@1.4.1@egg-static",
+      "version": "1.4.1"
+    },
+    "jsonp": {
+      "enable": true,
+      "package": "egg-jsonp",
+      "name": "jsonp",
+      "dependencies": [],
+      "optionalDependencies": [
+        "security"
+      ],
+      "env": [],
+      "from": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/plugin.js",
+      "path": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-jsonp@1.1.2@egg-jsonp",
+      "version": "1.1.2"
+    },
+    "view": {
+      "enable": true,
+      "package": "egg-view",
+      "name": "view",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg@1.6.1@egg/config/plugin.js",
+      "path": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-view@1.1.2@egg-view",
+      "version": "1.1.2"
+    },
+    "nunjucks": {
+      "enable": true,
+      "package": "egg-view-nunjucks",
+      "name": "nunjucks",
+      "dependencies": [
+        "security",
+        "view"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jcl/Desktop/Kylin_King/github/voteApp/config/plugin.js",
+      "path": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-view-nunjucks@2.1.3@egg-view-nunjucks",
+      "version": "2.1.3"
+    },
+    "oss": {
+      "enable": true,
+      "package": "egg-oss",
+      "name": "oss",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jcl/Desktop/Kylin_King/github/voteApp/config/plugin.js",
+      "path": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-oss@1.0.2@egg-oss",
+      "version": "1.0.2"
+    },
+    "validate": {
+      "enable": true,
+      "package": "egg-validate",
+      "name": "validate",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/jcl/Desktop/Kylin_King/github/voteApp/config/plugin.js",
+      "path": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-validate@1.0.0@egg-validate",
+      "version": "1.0.0"
+    },
+    "egg-mock": {
+      "enable": true,
+      "path": "/Users/jcl/Desktop/Kylin_King/github/voteApp/node_modules/_egg-mock@3.8.0@egg-mock",
+      "name": "egg-mock",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "version": "3.8.0"
+    }
+  }
+}

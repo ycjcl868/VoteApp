@@ -1,4 +1,6 @@
-dist/**
+dist/*
 !dist/lib/canvasjs.min.js
 node_modules
 .idea
+public/
+Temp/
