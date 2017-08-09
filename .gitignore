@@ -6,6 +6,7 @@ coverage/
 run/
 .DS_Store
 *.swp
-public/.gitignore
-app/public/.gitignore
+app/public/uploads/*
+!app/public/uploads/0da95546-1bc3-4a83-a444-badcf1327733.png
+public/*
 Temp/
