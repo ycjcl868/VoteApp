@@ -7,6 +7,7 @@ run/
 .DS_Store
 *.swp
 app/public/uploads/*
+app/public/*
 !app/public/uploads/0da95546-1bc3-4a83-a444-badcf1327733.png
 public/*
 Temp/
