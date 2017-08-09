@@ -6,6 +6,7 @@ coverage/
 run/
 .DS_Store
 .vscode/
+yarn.lock
 *.swp
 app/public/uploads/*
 app/public/*
