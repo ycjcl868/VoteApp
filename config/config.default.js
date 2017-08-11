@@ -19,7 +19,7 @@ module.exports = appInfo => {
     prefix: '/',
     dir: path.join(appInfo.baseDir, 'public'),
   };
-  config.mockServer = 'https://easy-mock.com/mock/59714774a1d30433d8391e7c/voteSystem/cine';
+  config.mockServer = 'https://easy-mock.com/mock/59714774a1d30433d8391e7c/voteSystem';
   config.server = 'http://119.29.0.179/VoteSystem';
   return config;
 };
