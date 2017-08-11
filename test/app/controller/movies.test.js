@@ -38,7 +38,8 @@ describe('example movies test', () => {
       dataType: 'json',
     }, (err, data, res) => {
       assert(!err, err && err.message);
-      assert.equal(res.statusCode, 200);
+      assert(res.statusCode === 200);
+      assert(res.data.status > 0);
       done();
     });
   });

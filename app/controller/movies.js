@@ -3,11 +3,12 @@ const createRule = {
 };
 
 exports.index = function* (ctx) {
+  const url = this.app.config.mockServer;
   // 电影列表
-  ctx.body = {
-    status: 1,
-    body: '电影列表',
-  };
+  const result = yield ctx.curl(`${url}/news.do`, {
+    dataType: 'json',
+  });
+  ctx.body = result.data;
 };
 exports.create = function* (ctx) {
   // 新增电影
