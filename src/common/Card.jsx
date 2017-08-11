@@ -37,6 +37,7 @@ class Card extends Component {
       className,
       style,
     } = this.props;
+
     const cardClassName = classNames({
       [className]: !!className,
       'card-list-item': true,
@@ -61,8 +62,9 @@ class Card extends Component {
               <p>简介:{description}</p>
             </div>
             <div className="card-list-item-category">
-              {category.map((item, i) =>
-                <Badge key={i} className="badge-category" text={item} />
+              {category.map((item, i) => {
+                return i < 3 ? <Badge key={i} className="badge-category" text={item} /> : null;
+              }
               )}
             </div>
             <div className="card-list-item-btn-group">

@@ -2,6 +2,7 @@ const svgSpriteDirs = [
   require.resolve('antd-mobile').replace(/warn\.js$/, ''), // antd-mobile 内置svg
   // path.resolve(__dirname, 'public/iconfont/'),  // 业务代码本地私有 svg 存放目录
 ];
+const server = 'https://easy-mock.com/mock/59714774a1d30433d8391e7c/voteSystem';
 export default {
   entry: "./src/pages/*.js",
   disableCSSModules: true,
@@ -23,7 +24,7 @@ export default {
   },
   proxy: {
     "/api/v1/movies": {
-      target: "https://easy-mock.com/mock/59714774a1d30433d8391e7c/voteSystem/cine/news.do",
+      target: `${server}/movies`,
       changeOrigin: true,
       pathRewrite: { "^/api/v1/movies" : "" }
     },
@@ -33,7 +34,7 @@ export default {
       pathRewrite: { "^/api/v1/summary" : "" }
     },
     "/api/v1/logNum": {
-      target: "https://easy-mock.com/mock/59714774a1d30433d8391e7c/voteSystem/cine/getLogNum",
+      target: `${server}/logNum`,
       changeOrigin: true,
       pathRewrite: { "^/api/v1/logNum" : "" }
     },

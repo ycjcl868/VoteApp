@@ -5,7 +5,8 @@ const createRule = {
 exports.index = function* (ctx) {
   const url = this.app.config.mockServer;
   // 电影列表
-  const result = yield ctx.curl(`${url}/news.do`, {
+  const result = yield ctx.curl(`${url}/movies`, {
+    method: 'GET',
     dataType: 'json',
   });
   ctx.body = result.data;
