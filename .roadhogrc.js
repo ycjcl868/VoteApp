@@ -39,7 +39,7 @@ export default {
       pathRewrite: { "^/api/v1/logNum" : "" }
     },
     "/api/v1/logs": {
-      target: "http://119.29.0.179/VoteSystem/info/news.do",
+      target: `${server}/logs`,
       changeOrigin: true,
       pathRewrite: { "^/api/v1/logs" : "" }
     },

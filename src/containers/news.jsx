@@ -9,19 +9,24 @@ import Footer from '../components/Footer';
 import '../styles/style.less';
 class News extends Component {
   render() {
+    console.log(this.props.news);
+    const { status, logs } = this.props.news;
     return (
       <div>
         <Header />
-        <NewsCard
-          ip="127.0.0.1"
-          time="2017-07-31 22:48:31"
-          num="5"
-          movie="wtc"
-        />
-        <Footer currentTab="news" />
+        {logs && logs.map((log, i) =>
+          <NewsCard
+            key={i}
+            ip={log.ip}
+            time={log.time}
+            num={log.num}
+            movie={log.movie}
+          />
+        )}
+        <Footer logNum={logs.length} currentTab="news" />
       </div>
     );
   }
 }
 
-export default connect(({ index }) => ({ index }))(News);
+export default connect(({ news }) => ({ news }))(News);

@@ -11,3 +11,9 @@ export function getLogNum() {
     method: 'GET',
   });
 }
+
+export function getLogs() {
+  return request('/api/v1/logs', {
+    method: 'GET',
+  });
+}
