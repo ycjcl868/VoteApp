@@ -29,7 +29,7 @@ export default {
       pathRewrite: { "^/api/v1/movies" : "" }
     },
     "/api/v1/summary": {
-      target: "http://119.29.0.179/VoteSystem/obtain/data.do",
+      target: `${server}/summary`,
       changeOrigin: true,
       pathRewrite: { "^/api/v1/summary" : "" }
     },

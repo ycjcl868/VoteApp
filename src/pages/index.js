@@ -10,8 +10,10 @@ import Summary from '../containers/summary.jsx';
 const app = dva();
 
 // app.model();
+app.model(require('../model/layout'));
 app.model(require('../model/index'));
 app.model(require('../model/news'));
+app.model(require('../model/summary'));
 app.model(require('../model/admin'));
 
 app.router(({ history }) =>

@@ -15,24 +15,10 @@ import {
 
 import './chart.less';
 
-const data = [
-  {
-    name: '长城',
-    num: 300,
-  }, {
-    name: '战狼2',
-    num: 3000,
-  }, {
-    name: '摆渡人',
-    num: 2000,
-  }, {
-    name: '建国大业',
-    num: 1000,
-  },
-];
-
 class Chart extends Component {
   render() {
+    const { data } = this.props;
+    console.log(this.props);
     return (
       <div className="chart">
         <h2 className="chart-title">各项电影得票图</h2>

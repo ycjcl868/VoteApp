@@ -3,23 +3,22 @@ import { connect } from 'dva';
 import { Toast } from 'antd-mobile';
 
 
-import Header from '../components/Header';
+import HomeLayout from './homeLayout';
 import Banner from '../components/Banner';
 import Search from '../components/Search';
 import CardList from '../components/CardList';
-import Footer from '../components/Footer';
+
 
 import '../styles/style.less';
 class Index extends Component {
   render() {
-    const { logNum, status } = this.props.index;
     return (
       <div>
-          <Header />
-          <Banner />
-          <Search />
-          <CardList {...this.props} />
-          <Footer logNum={logNum} currentTab="index" />
+          <HomeLayout currentTab="index">
+            <Banner />
+            <Search />
+            <CardList {...this.props} />
+          </HomeLayout>
       </div>
     );
   }

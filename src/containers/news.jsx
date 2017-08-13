@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'dva';
 import { Link } from 'dva/router';
 
-import Header from '../components/Header';
+import HomeLayout from './homeLayout';
 import NewsCard from '../components/NewsCard';
-import Footer from '../components/Footer';
 
 import '../styles/style.less';
 class News extends Component {
@@ -13,17 +12,17 @@ class News extends Component {
     const { status, logs } = this.props.news;
     return (
       <div>
-        <Header />
-        {logs && logs.map((log, i) =>
-          <NewsCard
-            key={i}
-            ip={log.ip}
-            time={log.time}
-            num={log.num}
-            movie={log.movie}
-          />
-        )}
-        <Footer logNum={logs.length} currentTab="news" />
+        <HomeLayout currentTab="news">
+          {logs && logs.map((log, i) =>
+            <NewsCard
+              key={i}
+              ip={log.ip}
+              time={log.time}
+              num={log.num}
+              movie={log.movie}
+            />
+          )}
+        </HomeLayout>
       </div>
     );
   }

@@ -17,3 +17,9 @@ export function getLogs() {
     method: 'GET',
   });
 }
+
+export function getSummary() {
+  return request('/api/v1/summary', {
+    method: 'GET',
+  });
+}

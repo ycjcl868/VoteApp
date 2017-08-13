@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
-import { Link } from 'dva/router';
 
-import Header from '../components/Header';
+import HomeLayout from './homeLayout';
 import Chart from '../components/Chart';
-import Footer from '../components/Footer';
 
 import '../styles/style.less';
 class Summary extends Component {
   render() {
-    console.log(this.props);
+    const { status, data } = this.props.summary;
     return (
       <div>
-        <Header />
-        <Chart />
-        <Footer currentTab="summary" />
+        <HomeLayout currentTab="summary">
+          <Chart data={data} />
+        </HomeLayout>
       </div>
     );
   }
 }
 
-export default connect(({ index }) => ({ index }))(Summary);
+export default connect(({ summary }) => ({ summary }))(Summary);
