@@ -3,10 +3,19 @@
 module.exports = app => {
   class HomeController extends app.Controller {
     * index() {
+      // const user = yield this.ctx.service.index.find(1);
       yield this.ctx.render('index', {
         title: '首页 - 电影投票系统',
         page: 'index',
       });
+    }
+    * logNum() {
+      const url = app.config.mockServer;
+      const result = yield this.ctx.curl(`${url}/logNum`, {
+        method: 'GET',
+        dataType: 'json',
+      });
+      this.ctx.body = result.data;
     }
     * upload() {
       yield this.ctx.render('upload', {

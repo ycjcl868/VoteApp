@@ -9,8 +9,10 @@ run/
 yarn.lock
 *.swp
 app/public/uploads/*
+app/public/dist/*
 app/public/*
 !app/public/uploads/0da95546-1bc3-4a83-a444-badcf1327733.png
+!app/public/dist/0da95546-1bc3-4a83-a444-badcf1327733.png
 public/*
 !public/*.html
 Temp/

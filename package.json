@@ -16,6 +16,7 @@
     "egg": "^1.4.0",
     "egg-development-proxyworker": "^1.1.0",
     "egg-multipart": "^1.5.0",
+    "egg-mysql": "^3.0.0",
     "egg-static": "^1.4.1",
     "egg-validate": "^1.0.0",
     "egg-view-nunjucks": "^2.1.3",
