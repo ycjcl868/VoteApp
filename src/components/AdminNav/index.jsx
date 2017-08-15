@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu, Icon } from 'antd';
+import { Menu, Icon, Breadcrumb } from 'antd';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
@@ -43,6 +43,10 @@ export default class AdminNav extends Component {
             <a href="https://ant.design" target="_blank" rel="noopener noreferrer">菜单四</a>
           </Menu.Item>
         </Menu>
+        <Breadcrumb style={{ margin: '12px 0' }}>
+          <Breadcrumb.Item>User</Breadcrumb.Item>
+          <Breadcrumb.Item>Bill</Breadcrumb.Item>
+        </Breadcrumb>
       </div>
     );
   }

@@ -3,9 +3,9 @@ import { Router, Route, IndexRoute } from 'dva/router';
 import React from 'react';
 // import ReactDOM from 'react-dom';
 
-import Index from '../containers/index.jsx';
-import News from '../containers/news.jsx';
-import Summary from '../containers/summary.jsx';
+import Index from '../containers/home/index.jsx';
+import News from '../containers/home/news.jsx';
+import Summary from '../containers/home/summary.jsx';
 
 const app = dva();
 

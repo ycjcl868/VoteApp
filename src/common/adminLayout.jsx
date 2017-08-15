@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
 
-import { Layout, Breadcrumb } from 'antd';
+import { Layout } from 'antd';
 const { Content } = Layout;
-
-import { connect } from 'dva';
 
 import AdminSider from '../components/AdminSider/';
 import AdminNav from '../components/AdminNav/';
-import Welcome from '../components/Welcome/';
 import Footer from '../components/AdminFooter/';
 
-import '../styles/admin.less';
-
-class Admin extends Component {
+class AdminLayout extends Component {
   render() {
     return (
       <Layout className="ant-layout-has-sider admin-layout">
@@ -20,11 +15,7 @@ class Admin extends Component {
         <Layout>
           <AdminNav />
           <Content style={{ margin: '0 16px' }}>
-            <Breadcrumb style={{ margin: '12px 0' }}>
-              <Breadcrumb.Item>User</Breadcrumb.Item>
-              <Breadcrumb.Item>Bill</Breadcrumb.Item>
-            </Breadcrumb>
-           <Welcome />
+            {this.props.children}
           </Content>
           <Footer />
         </Layout>
@@ -34,4 +25,4 @@ class Admin extends Component {
   }
 }
 
-export default connect(({ admin }) => ({ admin }))(Admin);
+export default AdminLayout;
