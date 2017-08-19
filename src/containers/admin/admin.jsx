@@ -5,6 +5,7 @@ import { Link } from 'dva/router';
 import { connect } from 'dva';
 
 import Welcome from '../../components/Welcome';
+import AdminMovie from '../../components/AdminMovie';
 
 import '../../styles/admin.less';
 
@@ -13,7 +14,7 @@ class Admin extends Component {
     return (
       <div>
         <Welcome />
-        <Link to="/login">login</Link>
+        <AdminMovie />
       </div>
     );
   }
