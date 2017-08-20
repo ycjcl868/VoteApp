@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Layout, Menu, Icon } from 'antd';
+import { Link } from 'dva/router';
+
 const { Sider } = Layout;
 const SubMenu = Menu.SubMenu;
 
@@ -12,31 +14,34 @@ class AdminSider extends Component {
     this.setState({ collapsed });
   };
   render() {
+    const { currentPath } = this.props;
+    console.log('-----currentPath------');
+    console.log(this.props);
     return (
       <Sider
         collapsible
         collapsed={this.state.collapsed}
         onCollapse={this.onCollapse}
       >
-        <div className="logo" />
-        <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-          <Menu.Item key="1">
-            <Icon type="pie-chart" />
-            <span>主页</span>
+        <Menu
+          theme="dark"
+          selectedKeys={[ currentPath ]}
+          defaultSelectedKeys={[ 'index' ]}
+          mode="inline"
+        >
+          <Menu.Item key="/dashboard">
+            <Link to="/dashboard">
+              <Icon type="pie-chart" />
+              <span>主页</span>
+            </Link>
           </Menu.Item>
-          <Menu.Item key="2">
-            <Icon type="desktop" />
-            <span>电影</span>
+          <Menu.Item key="/dashboard/movie">
+            <Link to="/dashboard/movie">
+              <Icon type="desktop" />
+              <span>电影</span>
+            </Link>
           </Menu.Item>
-          <SubMenu
-            key="sub1"
-            title={<span><Icon type="user" /><span>电影</span></span>}
-          >
-            <Menu.Item key="3">Tom</Menu.Item>
-            <Menu.Item key="4">Bill</Menu.Item>
-            <Menu.Item key="5">Alex</Menu.Item>
-          </SubMenu>
-          <Menu.Item key="8">
+          <Menu.Item key="log">
             <Icon type="file" />
             <span>日志</span>
           </Menu.Item>

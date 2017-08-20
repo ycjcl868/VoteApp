@@ -9,13 +9,14 @@ import Footer from '../components/AdminFooter/';
 
 class AdminLayout extends Component {
   render() {
+    const { children, location: { pathname } } = this.props;
     return (
       <Layout className="ant-layout-has-sider admin-layout">
-        <AdminSider />
+        <AdminSider currentPath={pathname} />
         <Layout>
-          <AdminNav />
+          <AdminNav currentPath={pathname} />
           <Content style={{ margin: '0 16px' }}>
-            {this.props.children}
+            {children}
           </Content>
           <Footer />
         </Layout>

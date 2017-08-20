@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 
 import AdminLayout from '../common/adminLayout.jsx';
-import Admin from '../containers/admin/admin.jsx';
-import Welcome from '../components/Welcome/';
+import Welcome from '../containers/admin/welcome.jsx';
+import Movie from '../containers/admin/movie.jsx';
 
 const app = dva();
 
@@ -29,8 +29,8 @@ app.router(({ history }) =>
       <IndexRoute component={Login} />
       <Route path="login" component={Login} />
       <Route path="dashboard" component={AdminLayout}>
-        <IndexRoute component={Admin} />
-        <Route path="movie" component={Welcome} />
+        <IndexRoute component={Welcome} />
+        <Route path="movie" component={Movie} />
       </Route>
     </Route>
   </Router>
