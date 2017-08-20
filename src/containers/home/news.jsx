@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'dva';
 import { Link } from 'dva/router';
 
-import HomeLayout from '../../common/homeLayout';
+import { HomeLayout } from '../../common';
 import NewsCard from '../../components/NewsCard';
 
 import '../../styles/style.less';

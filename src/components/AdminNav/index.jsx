@@ -29,9 +29,6 @@ export default class AdminNav extends Component {
           <Menu.Item key="mail">
             <Icon type="mail" />菜单一
           </Menu.Item>
-          <Menu.Item key="app" disabled>
-            <Icon type="appstore" />菜单二
-          </Menu.Item>
         </Menu>
 
         <Breadcrumb

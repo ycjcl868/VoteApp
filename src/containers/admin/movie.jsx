@@ -4,15 +4,59 @@ import { Link } from 'dva/router';
 
 import { connect } from 'dva';
 
-import AdminMovie from '../../components/AdminMovie';
+import { Button } from 'antd';
+import MovieModal from '../../components/MovieModal';
+import MovieTable from '../../components/MovieTable';
 
 import '../../styles/admin.less';
 
 class Movie extends Component {
+  state = {
+    visible: false,
+    currentData: '',
+  }
+  createMovie = () => {
+    this.setState({
+      visible: true,
+    });
+  }
+  editMovie = (data) => {
+    console.log('-----------------');
+    console.log(data);
+    this.setState({
+      visible: true,
+      currentData: data,
+    });
+  }
+  handleOk = (e) => {
+    console.log(e);
+    this.setState({
+      visible: false,
+    });
+  }
+  handleCancel = (e) => {
+    console.log(e);
+    this.setState({
+      visible: false,
+    });
+  }
   render() {
+    const { visible, currentData } = this.state;
     return (
-      <div>
-        <AdminMovie />
+      <div className="admin-content">
+        <Button
+          type="primary"
+          onClick={this.createMovie}
+        >新建电影</Button>
+        <MovieTable
+          editMovie={this.editMovie}
+        />
+        <MovieModal
+          visible={visible}
+          currentData={currentData}
+          onOk={this.handleOk}
+          onCancel={this.handleCancel}
+        />
       </div>
     );
   }

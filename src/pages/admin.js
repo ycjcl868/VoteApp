@@ -3,7 +3,7 @@ import { Router, Route, IndexRoute, Link } from 'dva/router';
 import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 
-import AdminLayout from '../common/adminLayout.jsx';
+import { AdminLayout } from '../common';
 import Welcome from '../containers/admin/welcome.jsx';
 import Movie from '../containers/admin/movie.jsx';
 

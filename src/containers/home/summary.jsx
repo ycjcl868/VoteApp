@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
 
-import HomeLayout from '../../common/homeLayout';
+import { HomeLayout } from '../../common';
 import Chart from '../../components/Chart';
 
 import '../../styles/style.less';

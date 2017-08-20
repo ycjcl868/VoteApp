@@ -3,7 +3,7 @@ import { connect } from 'dva';
 import { Toast } from 'antd-mobile';
 
 
-import HomeLayout from '../../common/homeLayout';
+import { HomeLayout } from '../../common';
 import Banner from '../../components/Banner';
 import Search from '../../components/Search';
 import CardList from '../../components/CardList';

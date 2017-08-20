@@ -11,7 +11,7 @@ import '../../styles/admin.less';
 class Admin extends Component {
   render() {
     return (
-      <div>
+      <div className="admin-content">
         <Welcome />
       </div>
     );
