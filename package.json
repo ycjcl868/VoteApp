@@ -53,7 +53,8 @@
     "webstorm-disable-index": "^1.2.0"
   },
   "entry": {
-    "home": "./src/index.js"
+    "index": "./src/pages/index.js",
+    "admin": "./src/pages/admin.js"
   },
   "engines": {
     "node": ">=6.0.0"

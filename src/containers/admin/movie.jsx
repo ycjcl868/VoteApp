@@ -44,10 +44,13 @@ class Movie extends Component {
     const { visible, currentData } = this.state;
     return (
       <div className="admin-content">
-        <Button
-          type="primary"
-          onClick={this.createMovie}
-        >新建电影</Button>
+        <div className="admin-content-movie-btn">
+          <Button
+            className="movie-btn"
+            type="primary"
+            onClick={this.createMovie}
+          >新建电影</Button>
+        </div>
         <MovieTable
           editMovie={this.editMovie}
         />
