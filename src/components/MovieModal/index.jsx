@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
 
-import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete, Modal } from 'antd';
+import {
+  Form,
+  Input,
+  Tooltip,
+  Icon,
+  Cascader,
+  Select,
+  Row,
+  Col,
+  Checkbox,
+  Button,
+  AutoComplete,
+  Modal,
+  DatePicker,
+} from 'antd';
 
 import './index.less';
 
@@ -117,7 +131,7 @@ class RegistrationForm extends Component {
     const { visible, onOk, onCancel, currentData } = this.props;
     return (
       <Modal
-        title="test"
+        title="电影编辑"
         style={{ top: 20 }}
         visible={visible}
         onOk={onOk}
@@ -126,14 +140,14 @@ class RegistrationForm extends Component {
         <Form className="movie-form" onSubmit={this.handleSubmit}>
           <FormItem
             {...formItemLayout}
-            label="E-mail"
+            label="电影名"
             hasFeedback
           >
-            {getFieldDecorator('email', {
+            {getFieldDecorator('name', {
               rules: [{
-                type: 'email', message: 'The input is not valid E-mail!',
+                type: 'string',
               }, {
-                required: true, message: 'Please input your E-mail!',
+                required: true, message: '请输入电影名',
               }],
             })(
               <Input />
@@ -141,17 +155,17 @@ class RegistrationForm extends Component {
           </FormItem>
           <FormItem
             {...formItemLayout}
-            label="Password"
+            label="发布时间"
             hasFeedback
           >
-            {getFieldDecorator('password', {
+            {getFieldDecorator('date', {
               rules: [{
-                required: true, message: 'Please input your password!',
+                type: 'date', message: '请选择正确的电影时间',
               }, {
-                validator: this.checkConfirm,
+                required: true, message: '请选择电影发布时间',
               }],
             })(
-              <Input type="password" />
+              <DatePicker />
             )}
           </FormItem>
           <FormItem

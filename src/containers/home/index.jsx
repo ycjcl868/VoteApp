@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
-import { Toast } from 'antd-mobile';
 
-
-import { HomeLayout } from '../../common';
+import { HomeLayout, Divider } from '../../common';
 import Banner from '../../components/Banner';
 import Search from '../../components/Search';
 import CardList from '../../components/CardList';
@@ -18,6 +16,7 @@ class Index extends Component {
             <Banner />
             <Search />
             <CardList {...this.props} />
+            <Divider />
           </HomeLayout>
       </div>
     );

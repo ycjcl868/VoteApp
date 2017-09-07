@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Menu, Icon, Breadcrumb } from 'antd';
+import { Link } from 'dva/router';
+
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
@@ -16,7 +18,11 @@ export default class AdminNav extends Component {
   }
   render() {
     const { currentPath } = this.props;
-    const pathArr = currentPath.split('/') || [];
+    const pathArr = currentPath.split('/').slice(1) || [];
+    const displayPath = {
+      dashboard: '控制台',
+      movie: '电影',
+    };
     console.log();
     return (
       <div className="adminNav">
@@ -35,7 +41,7 @@ export default class AdminNav extends Component {
           className="bread-nav"
         >
           {pathArr.map((path, i) =>
-            <Breadcrumb.Item key={i}>{path}</Breadcrumb.Item>
+            <Breadcrumb.Item key={i}><Link to={path}>{displayPath[path]}</Link></Breadcrumb.Item>
           )}
         </Breadcrumb>
       </div>

@@ -1,0 +1,19 @@
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: .3rem;
+
+  &::before, &::after {
+    content: "";
+    width: 1.5rem;
+    height: 0.01rem;
+    margin: 0 .5rem;
+    background-color: rgba(0, 0, 0, 0.23);
+  }
+  .divider-text {
+    color: rgba(0, 0, 0, 0.23);
+    font-size: .28rem;
+    min-width: 2rem;
+  }
+}
