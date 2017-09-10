@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'dva';
 import { Link } from 'dva/router';
 
-import { HomeLayout } from '../../common';
 import NewsCard from '../../components/NewsCard';
-
-import '../../styles/style.less';
+import HomeLayout from '../../components/homeLayout';
 class News extends Component {
   render() {
     console.log(this.props.news);

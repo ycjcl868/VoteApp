@@ -7,6 +7,8 @@ import Index from '../containers/home/index.jsx';
 import News from '../containers/home/news.jsx';
 import Summary from '../containers/home/summary.jsx';
 
+import '../styles/style.less';
+
 const app = dva();
 
 // app.model();

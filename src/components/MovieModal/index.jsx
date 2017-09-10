@@ -15,6 +15,8 @@ import {
   Modal,
   DatePicker,
 } from 'antd';
+import moment from 'moment';
+
 
 import './index.less';
 
@@ -51,7 +53,7 @@ class RegistrationForm extends Component {
     confirmDirty: false,
     autoCompleteResult: [],
   };
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
@@ -128,7 +130,11 @@ class RegistrationForm extends Component {
       <AutoCompleteOption key={website}>{website}</AutoCompleteOption>
     ));
 
-    const { visible, onOk, onCancel, currentData } = this.props;
+    const { visible, onOk, onCancel, currentData = {} } = this.props;
+
+    const { cineId = '', cineName = '', des = '', isNew = false, publishTime = '', ticket = '', type = [], url = '' } = currentData;
+    console.log('-------currentData--------------');
+    console.log(currentData);
     return (
       <Modal
         title="电影编辑"
@@ -143,7 +149,8 @@ class RegistrationForm extends Component {
             label="电影名"
             hasFeedback
           >
-            {getFieldDecorator('name', {
+            {getFieldDecorator('cineName', {
+              initialValue: cineName,
               rules: [{
                 type: 'string',
               }, {
@@ -158,7 +165,8 @@ class RegistrationForm extends Component {
             label="发布时间"
             hasFeedback
           >
-            {getFieldDecorator('date', {
+            {getFieldDecorator('publishTime', {
+              initialValue: moment(publishTime, ),
               rules: [{
                 type: 'date', message: '请选择正确的电影时间',
               }, {

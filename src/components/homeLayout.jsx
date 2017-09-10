@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'dva';
 
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from './Header';
+import Footer from './Footer';
 
-import '../styles/style.less';
 class HomeLayout extends Component {
   render() {
     const { logNum, status } = this.props.layout;

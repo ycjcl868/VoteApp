@@ -3,9 +3,11 @@ import { Router, Route, IndexRoute, Link } from 'dva/router';
 import React, { Component } from 'react';
 // import ReactDOM from 'react-dom';
 
-import { AdminLayout } from '../common';
 import Welcome from '../containers/admin/welcome.jsx';
+import AdminLayout from '../components/adminLayout.jsx';
 import Movie from '../containers/admin/movie.jsx';
+
+import '../styles/admin.less';
 
 const app = dva();
 
@@ -36,5 +38,5 @@ app.router(({ history }) =>
   </Router>
 );
 
-app.start('#root');
+app.start('#admin');
 

@@ -6,8 +6,6 @@ import { connect } from 'dva';
 
 import Welcome from '../../components/Welcome';
 
-import '../../styles/admin.less';
-
 class Admin extends Component {
   render() {
     return (

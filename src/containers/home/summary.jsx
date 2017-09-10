@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
 
-import { HomeLayout } from '../../common';
 import Chart from '../../components/Chart';
-
-import '../../styles/style.less';
+import HomeLayout from '../../components/homeLayout';
 class Summary extends Component {
   render() {
     const { status, data } = this.props.summary;

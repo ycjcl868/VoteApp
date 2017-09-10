@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
 
-import { HomeLayout, Divider } from '../../common';
+import { Divider } from '../../common';
+import HomeLayout from '../../components/homeLayout';
 import Banner from '../../components/Banner';
 import Search from '../../components/Search';
 import CardList from '../../components/CardList';
-
-
-import '../../styles/style.less';
 class Index extends Component {
   render() {
     return (

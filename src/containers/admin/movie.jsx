@@ -8,40 +8,46 @@ import { Button } from 'antd';
 import MovieModal from '../../components/MovieModal';
 import MovieTable from '../../components/MovieTable';
 
-import '../../styles/admin.less';
-
 class Movie extends Component {
   state = {
     visible: false,
     currentData: '',
-  }
+    list: [],
+  };
   createMovie = () => {
     this.setState({
       visible: true,
     });
   }
-  editMovie = (data) => {
+  editMovie = cineId => {
     console.log('-----------------');
-    console.log(data);
+    console.log(cineId);
     this.setState({
       visible: true,
-      currentData: data,
     });
   }
-  handleOk = (e) => {
+  handleOk = e => {
     console.log(e);
     this.setState({
       visible: false,
     });
   }
-  handleCancel = (e) => {
+  handleCancel = e => {
     console.log(e);
     this.setState({
       visible: false,
     });
   }
   render() {
-    const { visible, currentData } = this.state;
+    const {
+      visible,
+      currentData,
+      list,
+    } = this.state;
+    const {
+      status,
+      movies,
+    } = this.props.admin;
     return (
       <div className="admin-content">
         <div className="admin-content-movie-btn">
@@ -53,10 +59,10 @@ class Movie extends Component {
         </div>
         <MovieTable
           editMovie={this.editMovie}
+          data={movies}
         />
         <MovieModal
           visible={visible}
-          currentData={currentData}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
         />

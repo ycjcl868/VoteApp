@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import { Layout } from 'antd';
 const { Content } = Layout;
 
-import AdminSider from '../components/AdminSider/';
-import AdminNav from '../components/AdminNav/';
-import Footer from '../components/AdminFooter/';
+import AdminSider from './AdminSider/';
+import AdminNav from './AdminNav/';
+import Footer from './AdminFooter/';
 
 class AdminLayout extends Component {
   render() {

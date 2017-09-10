@@ -4,57 +4,74 @@ import { Table } from 'antd';
 
 import { Icon } from '../../common';
 
+import MovieModal from '../../components/MovieModal';
+
+import './index.less';
+
 
 class MovieTable extends Component {
-  mapKeyToData(key) {
-    this.props.editMovie(key);
+  state = {
+    visible: false,
+  }
+  editMovie(cineId) {
+    this.setState({
+      visible: true,
+    });
+  }
+  handleOk = e => {
+    console.log(e);
+    this.setState({
+      visible: false,
+    });
+  }
+  handleCancel = e => {
+    console.log(e);
+    this.setState({
+      visible: false,
+    });
   }
   render() {
+    const { visible } = this.state;
+    const { data } = this.props;
     const columns = [{
-      title: 'Name',
-      dataIndex: 'name',
-      key: 'name',
+      title: '电影名',
+      dataIndex: 'cineName',
+      key: 'cineName',
       render: text => <a href="#">{text}</a>,
     }, {
-      title: 'Age',
-      dataIndex: 'age',
-      key: 'age',
+      title: '海报',
+      dataIndex: 'url',
+      key: 'url',
+      render: url => <img className="movie-img" src={url} />,
     }, {
-      title: 'Address',
-      dataIndex: 'address',
-      key: 'address',
+      title: '上映时间',
+      dataIndex: 'publishTime',
+      key: 'publishTime',
     }, {
-      title: 'Action',
+      title: '当前票数',
+      dataIndex: 'ticket',
+      key: 'ticket',
+    }, {
+      title: '操作',
       key: 'action',
-      render: (text, record) => (
-        <span>
+      render: (text, record, i) => (
+        <span key={i}>
           <a href="#"><Icon type="xiangqing" />详情</a>
           <span className="ant-divider" />
-          <a onClick={() => this.mapKeyToData(record.key)} ><Icon type="xiugai" />修改</a>
+          <a onClick={() => this.editMovie(record.cineId)} ><Icon type="xiugai" />修改</a>
+          <MovieModal
+            visible={visible}
+            currentData={record}
+            onOk={this.handleOk}
+            onCancel={this.handleCancel}
+          />
           <span className="ant-divider" />
           <a href="#"><Icon type="icon10" />删除</a>
         </span>
       ),
     }];
-
-    const data = [{
-      key: '1',
-      name: 'John Brown',
-      age: 32,
-      address: 'New York No. 1 Lake Park',
-    }, {
-      key: '2',
-      name: 'Jim Green',
-      age: 42,
-      address: 'London No. 1 Lake Park',
-    }, {
-      key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sidney No. 1 Lake Park',
-    }];
     return (
-      <div>
+      <div className="admin-movie-table">
         <Table columns={columns} dataSource={data} />
       </div>
     );
