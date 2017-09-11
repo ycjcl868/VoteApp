@@ -1,4 +1,5 @@
 'use strict';
+const logNum = require('../../mockData/getLogNum.json');
 
 module.exports = app => {
   class HomeController extends app.Controller {
@@ -10,12 +11,7 @@ module.exports = app => {
       });
     }
     * logNum() {
-      const url = app.config.mockServer;
-      const result = yield this.ctx.curl(`${url}/logNum`, {
-        method: 'GET',
-        dataType: 'json',
-      });
-      this.ctx.body = result.data;
+      this.ctx.body = logNum;
     }
     * upload() {
       yield this.ctx.render('upload', {

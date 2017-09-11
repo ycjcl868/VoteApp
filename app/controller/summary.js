@@ -1,15 +1,12 @@
+const summary = require('../../mockData/getSummary.json');
+
 const createRule = {
 
 };
 
 exports.index = function* (ctx) {
   // 数据列表
-  const url = this.app.config.mockServer;
-  const result = yield ctx.curl(`${url}/summary`, {
-    method: 'GET',
-    dataType: 'json',
-  });
-  ctx.body = result.data;
+  ctx.body = summary;
 };
 exports.create = function* (ctx) {
   // 数据

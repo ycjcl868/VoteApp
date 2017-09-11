@@ -1,15 +1,11 @@
+const logs = require('../../mockData/getLogs.json');
 const createRule = {
 
 };
 
 exports.index = function* (ctx) {
   // 日志列表
-  const url = this.app.config.mockServer;
-  const result = yield ctx.curl(`${url}/logs`, {
-    method: 'GET',
-    dataType: 'json',
-  });
-  ctx.body = result.data;
+  ctx.body = logs;
 };
 exports.create = function* (ctx) {
   // 新增日志

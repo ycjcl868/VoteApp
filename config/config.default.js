@@ -38,7 +38,5 @@ module.exports = appInfo => {
     // 是否加载到 agent 上，默认关闭
     agent: false,
   };
-  config.mockServer = 'https://easy-mock.com/mock/59714774a1d30433d8391e7c/voteSystem';
-  config.server = 'http://119.29.0.179/VoteSystem';
   return config;
 };

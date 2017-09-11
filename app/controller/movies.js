@@ -1,15 +1,11 @@
+const movies = require('../../mockData/getMovie.json');
 const createRule = {
 
 };
 
 exports.index = function* (ctx) {
   // 电影列表
-  const url = this.app.config.mockServer;
-  const result = yield ctx.curl(`${url}/movies`, {
-    method: 'GET',
-    dataType: 'json',
-  });
-  ctx.body = result.data;
+  ctx.body = movies;
 };
 exports.create = function* (ctx) {
   // 新增电影
