@@ -12,7 +12,9 @@ import '../styles/admin.less';
 const app = dva();
 
 // app.model();
-app.model(require('../model/admin'));
+require.context('../model/admin', true, /\.js$/).keys().forEach(file => {
+  app.model(require(`../model/admin/${file.slice(2)}`));
+});
 
 class Login extends Component {
   render() {

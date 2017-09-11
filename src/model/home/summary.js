@@ -1,5 +1,5 @@
 
-import * as apiServer from '../services/api';
+import * as apiServer from '../../services/api';
 
 export default {
   namespace: 'summary',

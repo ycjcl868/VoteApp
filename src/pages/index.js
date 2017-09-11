@@ -12,11 +12,9 @@ import '../styles/style.less';
 const app = dva();
 
 // app.model();
-app.model(require('../model/layout'));
-app.model(require('../model/index'));
-app.model(require('../model/news'));
-app.model(require('../model/summary'));
-app.model(require('../model/admin'));
+require.context('../model/home', true, /\.js$/).keys().forEach(file => {
+  app.model(require(`../model/home/${file.slice(2)}`));
+});
 
 app.router(({ history }) =>
   <Router history={history}>

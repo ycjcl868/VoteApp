@@ -1,4 +1,4 @@
-import * as apiService from '../services/api';
+import * as apiService from '../../services/api';
 
 export default {
   namespace: 'index',
