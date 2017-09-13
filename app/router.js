@@ -2,12 +2,14 @@
 
 module.exports = app => {
   const home = app.controller.home;
+  const admin = app.controller.admin;
   const movies = app.controller.movies;
   const logs = app.controller.logs;
   const summary = app.controller.summary;
   const upload = app.controller.upload;
 
   app.get('/', home.index);
+  app.get('/admin', admin.index);
   app.get('/api/v1/logNum', home.logNum);
   app.resources('movies', '/api/v1/movies', movies);
   app.resources('logs', '/api/v1/logs', logs);

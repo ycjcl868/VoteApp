@@ -19,3 +19,7 @@ exports.static = true;
 //   enable: true,
 //   package: 'egg-mysql',
 // };
+exports.i18n = {
+  enable: true,
+  package: 'egg-i18n',
+};

@@ -6,7 +6,7 @@ module.exports = app => {
     * index() {
       // const user = yield this.ctx.service.index.find(1);
       yield this.ctx.render('index', {
-        title: '首页 - 电影投票系统',
+        title: this.ctx.__('index'),
         page: 'index',
       });
     }
@@ -15,7 +15,7 @@ module.exports = app => {
     }
     * upload() {
       yield this.ctx.render('upload', {
-        title: '上传页面',
+        title: this.ctx.__('upload'),
         page: 'upload',
       });
     }
