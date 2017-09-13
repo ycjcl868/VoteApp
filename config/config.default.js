@@ -3,7 +3,13 @@ const path = require('path');
 
 module.exports = appInfo => {
   const config = {};
-
+  // app server config
+  config.cluster = {
+    listen: {
+      port: '7001',
+      hostname: '127.0.0.1',
+    },
+  };
   // should change to your own
   config.keys = appInfo.name + '_1500789024630_3522';
 

@@ -8,6 +8,8 @@ run/
 .vscode/
 yarn.lock
 *.swp
+config/config.local.js
+config/config.prod.js
 app/public/uploads/*
 app/public/dist/*
 app/public/*

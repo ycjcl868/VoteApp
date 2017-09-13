@@ -18,6 +18,7 @@
     "egg-i18n": "^1.1.1",
     "egg-multipart": "^1.5.0",
     "egg-mysql": "^3.0.0",
+    "egg-scripts": "^1.2.0",
     "egg-static": "^1.4.1",
     "egg-validate": "^1.0.0",
     "egg-view-nunjucks": "^2.1.3",
@@ -61,7 +62,8 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "roadhog build && egg-scripts start --env=prod --title=egg-server-showcase --daemon",
+    "stop": "egg-scripts stop",
     "dev": "roadhog build && egg-bin dev",
     "dev:server": "egg-bin dev",
     "dev:client": "roadhog server",
