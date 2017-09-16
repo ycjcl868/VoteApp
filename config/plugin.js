@@ -15,10 +15,10 @@ exports.validate = {
   package: 'egg-validate',
 };
 exports.static = true;
-// exports.mysql = {
-//   enable: true,
-//   package: 'egg-mysql',
-// };
+exports.mysql = {
+  enable: false,
+  package: 'egg-mysql',
+};
 exports.i18n = {
   enable: true,
   package: 'egg-i18n',
