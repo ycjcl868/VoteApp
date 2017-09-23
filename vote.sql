@@ -1,45 +1,55 @@
 /*
-SQLyog Enterprise v12.09 (64 bit)
-MySQL - 5.5.49 : Database - vote
-*********************************************************************
-*/
+ Navicat Premium Data Transfer
 
-/*!40101 SET NAMES utf8 */;
+ Source Server         : mysql
+ Source Server Type    : MySQL
+ Source Server Version : 100125
+ Source Host           : localhost:3306
+ Source Schema         : vote
 
-/*!40101 SET SQL_MODE=''*/;
+ Target Server Type    : MySQL
+ Target Server Version : 100125
+ File Encoding         : 65001
 
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`vote` /*!40100 DEFAULT CHARACTER SET utf8 */;
+ Date: 23/09/2017 23:37:00
+*/
 
-USE `vote`;
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
 
-/*Table structure for table `cine` */
-
+-- ----------------------------
+-- Table structure for cine
+-- ----------------------------
 DROP TABLE IF EXISTS `cine`;
-
 CREATE TABLE `cine` (
-  `cineId` int(11) NOT NULL AUTO_INCREMENT,
-  `cineName` varchar(20) NOT NULL,
-  `ticket` int(11) DEFAULT NULL,
-  `url` varchar(200) NOT NULL,
-  `TYPE` varchar(30) DEFAULT NULL,
-  `des` varchar(400) DEFAULT NULL,
-  `publishTime` date DEFAULT NULL,
-  `sta` int(11) DEFAULT '0',
-  PRIMARY KEY (`cineId`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '电影id',
+  `cineName` varchar(20) NOT NULL COMMENT '电影名',
+  `ticket` int(11) DEFAULT NULL COMMENT '电影票数',
+  `poster` varchar(200) DEFAULT NULL COMMENT '电影海报',
+  `type` varchar(30) DEFAULT NULL COMMENT '电影类型',
+  `description` varchar(400) DEFAULT NULL COMMENT '电影描述',
+  `publishTime` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '电影发布时间',
+  `state` int(11) DEFAULT '0' COMMENT '电影状态, 0为不显示，1为显示',
+  `score` float(5,2) DEFAULT '0.00' COMMENT '电影评分',
+  `isNew` tinyint(4) DEFAULT '0' COMMENT '是否最新电影',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 
-/*Data for the table `cine` */
+-- ----------------------------
+-- Records of cine
+-- ----------------------------
+BEGIN;
+INSERT INTO `cine` VALUES (18, '战狼', 0, 'https://img3.doubanio.com/view/photo/photo/public/p2494292760.webp', '动作/格斗/爱国', '战狼', '2017-09-23 00:00:00', 1, 7.80, 0);
+INSERT INTO `cine` VALUES (19, '变形金刚3', 0, 'https://img3.doubanio.com/view/photo/photo/public/p1094397603.webp', '动作/科幻', '变形金刚', '2017-09-24 00:00:00', 1, 7.60, 1);
+INSERT INTO `cine` VALUES (20, '一二三', 10, 'https://img3.doubanio.com/view/photo/photo/public/p1094397603.webp', '动作', '一二三', '2017-09-23 17:22:42', 1, 5.60, 1);
+INSERT INTO `cine` VALUES (21, '三二一', 10, 'https://img3.doubanio.com/view/photo/photo/public/p1094397603.webp', '一/二/三', '一二三', '2017-09-23 22:03:01', 1, 7.50, 1);
+INSERT INTO `cine` VALUES (22, '三二一1111', 10, 'https://img3.doubanio.com/view/photo/photo/public/p1094397603.webp', '一/二/三', '一二三', '2017-09-23 22:09:10', 1, 7.50, 1);
+COMMIT;
 
-insert  into `cine`(`cineId`,`cineName`,`ticket`,`url`,`TYPE`,`des`,`publishTime`,`sta`) values (15,'wtc',0,'sss','喜剧','sssssssss','2017-01-10',1),(17,'地一柱擎天',NULL,'地一柱擎天','喜剧',NULL,NULL,1);
-
-/*Table structure for table `log` */
-
+-- ----------------------------
+-- Table structure for log
+-- ----------------------------
 DROP TABLE IF EXISTS `log`;
-
 CREATE TABLE `log` (
   `userIP` varchar(50) NOT NULL,
   `token` varchar(50) NOT NULL,
@@ -48,11 +58,13 @@ CREATE TABLE `log` (
   `province` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-/*Data for the table `log` */
+-- ----------------------------
+-- Records of log
+-- ----------------------------
+BEGIN;
+INSERT INTO `log` VALUES ('ss', 'df', 1000, '2017-01-08 02:08:57', 'xi,an');
+INSERT INTO `log` VALUES ('127.0.0.2', 'ce50efbb9f8e1ef688b046daf05cdc0e', 1000, '2017-01-09 11:02:21', '陕西');
+INSERT INTO `log` VALUES ('fcsdavc', 'fsadf', 1001, '2017-01-10 11:11:55', '河北');
+COMMIT;
 
-insert  into `log`(`userIP`,`token`,`cineId`,`voteTime`,`province`) values ('ss','df',1000,'2017-01-08 02:08:57','xi,an'),('127.0.0.2','ce50efbb9f8e1ef688b046daf05cdc0e',1000,'2017-01-09 11:02:21','陕西'),('fcsdavc','fsadf',1001,'2017-01-10 11:11:55','河北');
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+SET FOREIGN_KEY_CHECKS = 1;

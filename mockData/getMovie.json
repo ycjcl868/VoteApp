@@ -2,7 +2,7 @@
   "status": 2,
   "list": [
     {
-      "cineId": 21,
+      "id": 21,
       "cineName": "组员去接理青",
       "ticket": 171,
       "url": "http://dummyimage.com/350x200",
@@ -16,7 +16,7 @@
       "isNew": false
     },
     {
-      "cineId": 23,
+      "id": 23,
       "cineName": "单数红长化开",
       "ticket": 66,
       "url": "http://dummyimage.com/350x200",
@@ -31,7 +31,7 @@
       "isNew": false
     },
     {
-      "cineId": 70,
+      "id": 70,
       "cineName": "大历影第据本",
       "ticket": 112,
       "url": "http://dummyimage.com/350x200",
@@ -44,7 +44,7 @@
       "isNew": false
     },
     {
-      "cineId": 86,
+      "id": 86,
       "cineName": "保安被",
       "ticket": 275,
       "url": "http://dummyimage.com/350x200",

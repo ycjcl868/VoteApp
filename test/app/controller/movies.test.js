@@ -46,7 +46,7 @@ describe('example movies test', () => {
 
   it('should POST /api/vi/movies success', done => {
     const form = formstream();
-    form.field('cineId', 'movie1');
+    form.field('id', 'movie1');
     const headers = form.headers();
     headers.Cookie = cookies;
     urllib.request(`${host}/api/v1/movies?_csrf=${csrfToken}`, {
@@ -63,7 +63,7 @@ describe('example movies test', () => {
 
   it('should PUT /api/v1/movies/:id success', done => {
     const form = formstream();
-    form.field('cineId', 'movie1');
+    form.field('id', 'movie1');
     const headers = form.headers();
     headers.Cookie = cookies;
     urllib.request(`${host}/api/v1/movies/1?_csrf=${csrfToken}`, {
@@ -80,7 +80,7 @@ describe('example movies test', () => {
 
   it('should DELETE /api/v1/movies/:id success', done => {
     const form = formstream();
-    form.field('cineId', 'movie1');
+    form.field('id', 'movie1');
     const headers = form.headers();
     headers.Cookie = cookies;
     urllib.request(`${host}/api/v1/movies/1?_csrf=${csrfToken}`, {

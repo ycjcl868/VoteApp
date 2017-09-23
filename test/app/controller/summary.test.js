@@ -46,7 +46,7 @@ describe('example summary test', () => {
 
   it('should POST /api/vi/summary success', done => {
     const form = formstream();
-    form.field('cineId', 'summary');
+    form.field('id', 'summary');
     const headers = form.headers();
     headers.Cookie = cookies;
     urllib.request(`${host}/api/v1/summary?_csrf=${csrfToken}`, {
@@ -63,7 +63,7 @@ describe('example summary test', () => {
 
   it('should PUT /api/v1/summary/:id success', done => {
     const form = formstream();
-    form.field('cineId', 'summary');
+    form.field('id', 'summary');
     const headers = form.headers();
     headers.Cookie = cookies;
     urllib.request(`${host}/api/v1/summary/1?_csrf=${csrfToken}`, {
@@ -80,7 +80,7 @@ describe('example summary test', () => {
 
   it('should DELETE /api/v1/summary/:id success', done => {
     const form = formstream();
-    form.field('cineId', 'summary');
+    form.field('id', 'summary');
     const headers = form.headers();
     headers.Cookie = cookies;
     urllib.request(`${host}/api/v1/summary/1?_csrf=${csrfToken}`, {

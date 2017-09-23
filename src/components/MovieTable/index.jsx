@@ -13,7 +13,7 @@ class MovieTable extends Component {
   state = {
     visible: false,
   }
-  editMovie(cineId) {
+  editMovie(id) {
     this.setState({
       visible: true,
     });
@@ -58,7 +58,7 @@ class MovieTable extends Component {
         <span key={i}>
           <a href="#"><Icon type="xiangqing" />详情</a>
           <span className="ant-divider" />
-          <a onClick={() => this.editMovie(record.cineId)} ><Icon type="xiugai" />修改</a>
+          <a onClick={() => this.editMovie(record.id)} ><Icon type="xiugai" />修改</a>
           <MovieModal
             visible={visible}
             currentData={record}

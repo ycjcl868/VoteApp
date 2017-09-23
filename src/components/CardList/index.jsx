@@ -20,7 +20,7 @@ class CardList extends Component {
          {movieList && movieList.map((movie, i) =>
             <Card
               key={i}
-              cineId={movie.cineId}
+              id={movie.id}
               movieImage={movie.url}
               title={movie.cineName}
               voteNum={movie.ticket}

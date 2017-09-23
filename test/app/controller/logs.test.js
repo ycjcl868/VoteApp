@@ -46,7 +46,7 @@ describe('example logs test', () => {
 
   it('should POST /api/vi/logs success', done => {
     const form = formstream();
-    form.field('cineId', 'logs');
+    form.field('id', 'logs');
     const headers = form.headers();
     headers.Cookie = cookies;
     urllib.request(`${host}/api/v1/logs?_csrf=${csrfToken}`, {
@@ -63,7 +63,7 @@ describe('example logs test', () => {
 
   it('should PUT /api/v1/logs/:id success', done => {
     const form = formstream();
-    form.field('cineId', 'logs');
+    form.field('id', 'logs');
     const headers = form.headers();
     headers.Cookie = cookies;
     urllib.request(`${host}/api/v1/logs/1?_csrf=${csrfToken}`, {
@@ -80,7 +80,7 @@ describe('example logs test', () => {
 
   it('should DELETE /api/v1/logs/:id success', done => {
     const form = formstream();
-    form.field('cineId', 'logs');
+    form.field('id', 'logs');
     const headers = form.headers();
     headers.Cookie = cookies;
     urllib.request(`${host}/api/v1/logs/1?_csrf=${csrfToken}`, {

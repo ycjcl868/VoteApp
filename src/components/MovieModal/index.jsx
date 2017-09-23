@@ -132,7 +132,7 @@ class RegistrationForm extends Component {
 
     const { visible, onOk, onCancel, currentData = {} } = this.props;
 
-    const { cineId = '', cineName = '', des = '', isNew = false, publishTime = '', ticket = '', type = [], url = '' } = currentData;
+    const { id = '', cineName = '', des = '', isNew = false, publishTime = '', ticket = '', type = [], url = '' } = currentData;
     console.log('-------currentData--------------');
     console.log(currentData);
     return (

@@ -19,9 +19,8 @@ class Movie extends Component {
       visible: true,
     });
   }
-  editMovie = cineId => {
-    console.log('-----------------');
-    console.log(cineId);
+  editMovie = id => {
+    console.log(id);
     this.setState({
       visible: true,
     });
