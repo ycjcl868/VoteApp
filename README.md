@@ -19,7 +19,7 @@
 ### Settings
 mysql is disallow by default, if you want to enable the mysql db, please change the files as follow .
 
-```
+```js
 // import vote.sql into your mysql
 
 // config/plugin.js

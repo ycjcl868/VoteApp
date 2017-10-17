@@ -8,12 +8,14 @@ module.exports = app => {
   const summary = app.controller.summary;
   const upload = app.controller.upload;
 
+  const auth = app.middlewares.authValidate();
+
   app.get('/', home.index);
   app.get('/admin', admin.index);
   app.get('/api/v1/logNum', home.logNum);
   app.resources('movies', '/api/v1/movies', movies);
   app.resources('logs', '/api/v1/logs', logs);
   app.resources('summary', '/api/v1/summary', summary);
-  app.get('/upload', home.upload);
+  app.get('/upload', auth, home.upload);
   app.post('/upload', upload);
 };

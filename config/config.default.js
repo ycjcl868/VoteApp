@@ -10,6 +10,7 @@ module.exports = appInfo => {
       hostname: '127.0.0.1',
     },
   };
+  config.middleware = [ 'saveSession' ];
   // should change to your own
   config.keys = appInfo.name + '_1500789024630_3522';
 
@@ -24,6 +25,9 @@ module.exports = appInfo => {
   config.static = {
     prefix: '/',
     dir: path.join(appInfo.baseDir, 'app/public'),
+  };
+  config.security = {
+    csrf: true,
   };
   config.mysql = {
     // 单数据库信息配置
@@ -46,6 +50,12 @@ module.exports = appInfo => {
   };
   config.i18n = {
     defaultLocale: 'zh-CN',
+  };
+  config.session = {
+    key: 'your key',
+    maxAge: 24 * 3600 * 1000, // 1天
+    httpOnly: true,
+    encrypt: true,
   };
   return config;
 };
