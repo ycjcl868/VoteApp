@@ -10,10 +10,16 @@ class Admin extends Component {
   render() {
     return (
       <div className="admin-content">
-        <Welcome />
+        <Welcome {...this.props} />
       </div>
     );
   }
 }
 
-export default connect(({ admin }) => ({ admin }))(Admin);
+export default connect(state => ({
+  admin: state.admin,
+  status: state.admin.status,
+  record: state.admin.record,
+  current: state.admin.current,
+  movies: state.admin.movies,
+}))(Admin);

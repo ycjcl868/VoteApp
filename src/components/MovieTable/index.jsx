@@ -61,7 +61,7 @@ class MovieTable extends Component {
           <a onClick={() => this.editMovie(record.id)} ><Icon type="xiugai" />修改</a>
           <MovieModal
             visible={visible}
-            currentData={record}
+            {...record}
             onOk={this.handleOk}
             onCancel={this.handleCancel}
           />

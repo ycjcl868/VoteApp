@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
-import { Link } from 'dva/router';
+
 
 import NewsCard from '../../components/NewsCard';
 import HomeLayout from '../../components/homeLayout';
 class News extends Component {
   render() {
-    console.log(this.props.news);
-    const { status, logs } = this.props.news;
+    const { logs } = this.props;
     return (
       <div>
-        <HomeLayout currentTab="news">
+        <HomeLayout currentTab="news" {...this.props}>
           {logs && logs.map((log, i) =>
             <NewsCard
               key={i}
-              ip={log.ip}
-              time={log.time}
-              num={log.num}
-              movie={log.movie}
+              {...log}
             />
           )}
         </HomeLayout>
@@ -26,4 +22,9 @@ class News extends Component {
   }
 }
 
-export default connect(({ news }) => ({ news }))(News);
+export default connect(state => ({
+  news: state.news,
+  logs: state.news.logs,
+  logNum: state.index.logNum,
+  status: state.news.status,
+}))(News);

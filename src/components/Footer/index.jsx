@@ -10,6 +10,8 @@ import './footer.less';
 class Footer extends Component {
   render() {
     const { logNum = 0 } = this.props;
+    console.log('---footer-----');
+    console.log(this.props);
 
     return (
       <div className="footer">

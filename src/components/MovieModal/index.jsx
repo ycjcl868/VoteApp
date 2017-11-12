@@ -55,7 +55,8 @@ class RegistrationForm extends Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    this.props.form.validateFieldsAndScroll((err, values) => {
+    const { form } = this.props;
+    form.validateFieldsAndScroll((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
       }
@@ -130,11 +131,20 @@ class RegistrationForm extends Component {
       <AutoCompleteOption key={website}>{website}</AutoCompleteOption>
     ));
 
-    const { visible, onOk, onCancel, currentData = {} } = this.props;
+    const {
+      visible,
+      onOk,
+      onCancel,
+      id,
+      cineName,
+      des,
+      isNew,
+      publishTime,
+      ticket,
+      type,
+      url
+    } = this.props;
 
-    const { id = '', cineName = '', des = '', isNew = false, publishTime = '', ticket = '', type = [], url = '' } = currentData;
-    console.log('-------currentData--------------');
-    console.log(currentData);
     return (
       <Modal
         title="电影编辑"
@@ -166,7 +176,7 @@ class RegistrationForm extends Component {
             hasFeedback
           >
             {getFieldDecorator('publishTime', {
-              initialValue: moment(publishTime, ),
+              initialValue: moment(publishTime),
               rules: [{
                 type: 'date', message: '请选择正确的电影时间',
               }, {
@@ -271,5 +281,16 @@ class RegistrationForm extends Component {
 }
 
 const WrappedRegistrationForm = Form.create()(RegistrationForm);
+
+WrappedRegistrationForm.defaultProps = {
+  id: '',
+  cineName: '',
+  des: '',
+  isNew: false,
+  publishTime: '',
+  ticket: '',
+  type: [],
+  url: '',
+};
 
 export default WrappedRegistrationForm;

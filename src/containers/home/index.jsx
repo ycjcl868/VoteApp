@@ -10,7 +10,7 @@ class Index extends Component {
   render() {
     return (
       <div>
-          <HomeLayout currentTab="index">
+          <HomeLayout currentTab="index" {...this.props}>
             <Banner />
             <Search />
             <CardList {...this.props} />
@@ -21,4 +21,9 @@ class Index extends Component {
   }
 }
 
-export default connect(({ index }) => ({ index }))(Index);
+export default connect(state => ({
+  index: state.index,
+  movies: state.index.movies,
+  logNum: state.index.logNum,
+  status: state.index.status,
+}))(Index);

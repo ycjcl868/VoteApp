@@ -12,10 +12,10 @@ class AdminLayout extends Component {
     const { children, location: { pathname } } = this.props;
     return (
       <Layout className="ant-layout-has-sider admin-layout">
-        <AdminSider currentPath={pathname} />
+        <AdminSider currentPath={pathname} {...this.props} />
         <Layout>
-          <AdminNav currentPath={pathname} />
-          <Content style={{ margin: '0 16px' }}>
+          <AdminNav currentPath={pathname} {...this.props} />
+          <Content {...this.props} style={{ margin: '0 16px' }}>
             {children}
           </Content>
           <Footer />

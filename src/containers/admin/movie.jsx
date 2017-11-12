@@ -70,4 +70,9 @@ class Movie extends Component {
   }
 }
 
-export default connect(({ admin }) => ({ admin }))(Movie);
+export default connect(state => ({
+  admin: state.admin,
+  record: state.admin.record,
+  current: state.admin.current,
+  movies: state.admin.movies,
+}))(Movie);
