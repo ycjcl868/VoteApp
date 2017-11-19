@@ -10,18 +10,29 @@ export default {
   outputPath: "./app/public/dist",
   extraBabelPlugins: [
     "transform-runtime",
-    "dva-hmr",
     ["import",[
       { libraryName: "antd", style: "css" },
       { libraryName: "antd-mobile", style: "css" }
      ]
     ]
   ],
+  env: {
+    development: {
+      extraBabelPlugins: [
+        "dva-hmr",
+        "transform-runtime",
+        ["import",[
+          { libraryName: "antd", style: "css" },
+          { libraryName: "antd-mobile", style: "css" }
+         ]
+        ]
+      ]
+    }
+  },
   theme: {
     "@primary-color": "#18B4ED",
     "@font-family": "'Helvetica Neue',Helvetica,'Hiragino Sans GB','Microsoft YaHei','微软雅黑',Arial,sans-serif"
   },
-  extraPostCSSPlugins: [],
   autoprefixer: {
     browsers: [
       "iOS >= 8", "Android >= 4"

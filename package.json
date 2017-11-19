@@ -65,7 +65,7 @@
   "scripts": {
     "start": "roadhog build && egg-scripts start --env=prod --title=egg-server-showcase --daemon",
     "stop": "egg-scripts stop",
-    "dev": "roadhog build && egg-bin dev",
+    "dev": "npm run dev:client & npm run dev:server",
     "dev:server": "egg-bin dev",
     "dev:client": "roadhog server",
     "build": "roadhog build",

@@ -51,28 +51,22 @@ config.mysql = {
 
 ### Development
 
-```shell
+```bash
 # install the dependencies
 $ npm install
 ```
 
-```shell
-# Front-End debug
-$ npm run dev:client
-$ open http://localhost:8000/
-```
-
-```shell
-# Egg backend
-$ npm run dev:server
-$ open http://localhost:7001/news
-```
-
-```shell
+```bash
 # Front-End + Egg backend
 $ npm run dev
-$ open http://localhost:7001/news
+$ open http://localhost:8000
 ```
+
+### Production
+```bash
+$ npm run start
+```
+
 ### Deploy
 
 Use `EGG_SERVER_ENV=prod` to enable prod mode

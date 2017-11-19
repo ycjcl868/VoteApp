@@ -5,7 +5,7 @@ import { Badge, Button, Modal, WingBlank } from 'antd-mobile';
 
 import { Icon } from '../common';
 
-import './Card.less';
+import './card.less';
 
 class Card extends Component {
   constructor(props) {
