@@ -74,7 +74,8 @@
     "cov": "egg-bin cov",
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
-    "autod": "autod"
+    "autod": "autod",
+    "watch": "roadhog build --watch"
   },
   "ci": {
     "version": "6,7,8"

@@ -12,11 +12,11 @@ module.exports = function* () {
   const filename = `${uuidv4(streamFile[len - 2])}.${streamFile[len - 1]}`;
   // console.log(filename);
   // console.log(stream);
-  let filepath = path.join(this.app.config.baseDir, `app/public/uploads/${filename}`);
+  let filepath = path.join(this.app.config.baseDir, `dist/uploads/${filename}`);
   if (stream.fields.title === 'mock-error') {
     filepath = path.join(this.app.config.baseDir, `app/public/uploads/not-exists/dir/${filename}`);
   } else if (stream.fields.title === 'mock-read-error') {
-    filepath = path.join(this.app.config.baseDir, `app/public/uploads/read-error-${filename}`);
+    filepath = path.join(this.app.config.baseDir, `dist/uploads/read-error-${filename}`);
   }
   this.logger.warn('Saving %s to %s', stream.filename, filepath);
   try {

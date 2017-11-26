@@ -7,7 +7,6 @@ export default {
   disableCSSModules: true,
   publicPath: "/",
   svgSpriteLoaderDirs: svgSpriteDirs,
-  outputPath: "./app/public/dist",
   extraBabelPlugins: [
     "transform-runtime",
     ["import",[

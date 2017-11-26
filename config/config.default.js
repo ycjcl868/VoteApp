@@ -21,10 +21,11 @@ module.exports = appInfo => {
   config.view = {
     defaultViewEngine: 'nunjucks',
     defaultExtension: '.html',
+    root: path.join(appInfo.baseDir, 'dist'),
   };
   config.static = {
     prefix: '/',
-    dir: path.join(appInfo.baseDir, 'app/public'),
+    dir: path.join(appInfo.baseDir, 'dist'),
   };
   config.security = {
     csrf: true,
