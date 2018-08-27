@@ -18,7 +18,7 @@
     "egg-i18n": "^1.1.1",
     "egg-multipart": "^1.5.0",
     "egg-mysql": "^3.0.0",
-    "egg-scripts": "^1.2.0",
+    "egg-scripts": "^2.8.1",
     "egg-static": "^1.4.1",
     "egg-validate": "^1.0.0",
     "egg-view-nunjucks": "^2.1.3",
