@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "antd": "^2.12.6",
-    "antd-mobile": "^1.6.3",
+    "antd-mobile": "^2.0.0",
     "babel-cli": "^6.11.4",
     "babel-core": "^6.13.2",
     "babel-preset-es2015": "^6.13.2",
