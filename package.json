@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "antd": "^2.12.6",
-    "antd-mobile": "^1.6.3",
+    "antd-mobile": "^2.0.0",
     "babel-cli": "^6.11.4",
     "babel-core": "^6.13.2",
     "babel-preset-es2015": "^6.13.2",
@@ -18,7 +18,7 @@
     "egg-i18n": "^1.1.1",
     "egg-multipart": "^1.5.0",
     "egg-mysql": "^3.0.0",
-    "egg-scripts": "^1.2.0",
+    "egg-scripts": "^2.8.1",
     "egg-static": "^1.4.1",
     "egg-validate": "^1.0.0",
     "egg-view-nunjucks": "^2.1.3",
@@ -27,13 +27,14 @@
     "i": "^0.3.5",
     "moment": "^2.18.1",
     "ms": "^2.0.0",
-    "npm": "^5.3.0",
+    "npm": "^6.6.0",
     "prop-types": "^15.5.10",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "recharts": "^1.0.0-alpha.2",
     "stream-wormhole": "^1.0.3",
-    "uuid": "^3.1.0"
+    "uuid": "^3.1.0",
+    "snyk": "^1.158.0"
   },
   "devDependencies": {
     "autod": "^2.8.0",
@@ -75,7 +76,9 @@
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
     "autod": "autod",
-    "watch": "roadhog build --watch"
+    "watch": "roadhog build --watch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "ci": {
     "version": "6,7,8"
@@ -85,5 +88,6 @@
     "url": ""
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
